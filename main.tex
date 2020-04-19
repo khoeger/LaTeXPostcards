@@ -1,14 +1,31 @@
-\documentclass[12pt,twoside,twocolumn,draft,showtrims]{memoir} %final at end
+\documentclass[12pt,letterpaper,twoside,twocolumn,draft,showtrims]{memoir} %final at end
 % http://texdoc.net/texmf-dist/doc/latex/memoir/memman.pdf
 
 % -- Page Layout
 \usepackage[landscape]{geometry}
 \pagenumbering{gobble}
 
+% -- Stock: Letterpaper
+\settrimmedsize{0.5\stockwidth}{0.5\stockheight}{*}
+\setlrmarginsandblock{5mm}{5mm}{*}
+\setulmarginsandblock{5mm}{5mm}{*}
+\setcolsepandrule{5mm}{.4pt}
 
+%% -- Headers / Footers
+%\setheadfoot{⟨headheight⟩}{⟨footskip⟩}
+%\setheaderspaces{⟨headdrop⟩}{⟨headsep⟩}{⟨ratio⟩}
+%\setfootins{⟨length for normal⟩}{⟨length for minipage⟩}
 
 \begin{document}
+
+\newpage
 a
+
+
 \newpage
 b
+\newpage
+
+PICTURE
+
 \end{document}
