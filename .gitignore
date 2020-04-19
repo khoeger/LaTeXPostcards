@@ -1,0 +1,11 @@
+
+.DS_Store
+*.aux
+*.log
+*.pdf
+*.synctex.gz
+
+DSCF2107.JPG
+businessCard.tex
+businessCard2.tex
+logo.png
