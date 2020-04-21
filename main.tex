@@ -1,18 +1,22 @@
-\documentclass[12pt,letterpaper,twoside,twocolumn,draft,showtrims]{memoir} %final at end
+\documentclass[12pt,twoside,twocolumn,draft,showtrims]{memoir} %final at end
 % http://texdoc.net/texmf-dist/doc/latex/memoir/memman.pdf
 
 % -- Page Layout
-\usepackage[landscape]{geometry}
+%\usepackage[landscape]{geometry}
 \pagenumbering{gobble}
 
 % -- Stock: Letterpaper
+\setstocksize{8.5in}{11in}
+\makeatletter
 \settrimmedsize{0.5\stockwidth}{0.5\stockheight}{*}
 \settypeblocksize{0.45\stockheight}{0.45\stockwidth}{*}
 \setlrmarginsandblock{5mm}{5mm}{*}
 \setulmarginsandblock{5mm}{5mm}{*}
+\setheadfoot{5mm}{5mm}
 \setcolsepandrule{5mm}{.4pt}
-
+%
 \setpagecc{0\stockheight}{0\stockwidth}{*}
+%\trimLmarks
 
 %\checkandfixthelayout
 
