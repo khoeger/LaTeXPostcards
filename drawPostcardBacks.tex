@@ -1,0 +1,34 @@
+\documentclass[letterpaper]{article}
+
+%--------- Packages
+\usepackage{graphics}
+\usepackage{tikz}	
+\usepackage[	landscape, 
+						headheight=0in,
+						lmargin=0in, 
+						rmargin=0in,
+						tmargin=0in,
+						bmargin=0in
+						]{geometry}
+
+
+\pagenumbering{gobble}  %surpress page numbers
+%--------- Begin Document
+\begin{document}
+	
+
+	\beginpgfgraphicnamed{test}
+	
+		%circle
+		\begin{tikzpicture}
+			\fill (0,0) circle (100pt);
+		\end{tikzpicture}
+		
+		% rectangle
+		\begin{tikzpicture}
+			\fill (0,0) rectangle (100pt, 100pt);
+		\end{tikzpicture}	
+		
+	\endpgfgraphicnamed
+	
+\end{document}
