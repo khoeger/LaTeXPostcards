@@ -4,6 +4,7 @@
 *.log
 *.pdf
 *.synctex.gz
+*processing
 
 DSCF2107.JPG
 businessCard.tex
