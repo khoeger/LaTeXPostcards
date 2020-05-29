@@ -1,6 +1,8 @@
-\documentclass[12pt, letterpaper]{article}
+\documentclass[12pt]{article}
 
 % --- Packages
+\usepackage[paperwidth=5.5in, paperheight=4.25in,margin=0in]{geometry}
+
 \usepackage{tikz} 			%draw
 
 \usepackage{fontspec}		%Set font
@@ -9,27 +11,53 @@
 % --- Formatting
 \pagenumbering{gobble}
 
+
 % --- Defined Values
-% Variables 
-\newcommand{\setNumber}{#1}
-\newcommand{\cardNumber}{#1}
-\newcommand{\cardTitle}{#1}
-% Send Instructions
+%% Variables
+\newcommand{\altMargin}{1}
+\newcommand{\cardHeight}{\paperheight-\altMargin}
+\newcommand{\cardWidth}{\paperwidth-\altMargin}
+% Style Variables
+\newcommand{\setNumberSty}[1]{#1}
+\newcommand{\cardNumberSty}[1]{#1}
+\newcommand{ \cardTitleSty }[1]{\raggedright \Huge \uppercase{#1}}
+\newcommand{\qrkNumSty}{ 	QRK 
+											M7_{\setNumber}
+											20200530:\cardNumber-\setNumber/20 
+											T9}
+% Instructions For
+\newcommand{\sender}{Before Sending}
+\newcommand{\recipient}{Before Reading}
+% Instructions
+\newcommand{\single}[1]{#1}							
+\newcommand{\double}[2]{#1,#2}
+\newcommand{\triple}[3]{#1,#2,3}
+\newcommand{\singleSingle}[2]{#1,#2}
+\newcommand{\doubleSingle}[3]{#1,#2,#3}
+\newcommand{\tripleSingle}[4]{#1,#2,#3,#4}
+\newcommand{\singleDouble}[3]{#1,#2,#3}
+\newcommand{\doubleDouble}[4]{#1,#2,#3,#4}
+\newcommand{\tripleDouble}[5]{#1,#2,#3,#4,#5}
+\newcommand{\singleTriple}[4]{#1,#2,#3,#4}
+\newcommand{\doubleTriple}[5]{#1,#2,#3,#4,#5}
+\newcommand{\tripleTriple}[6]{#1,#2,#3,#4,#5,#6}
 
 
 
 \begin{document}
 
 \begin{figure}
-\resizebox{5.5in}{4.25in}
-	{
-	\begin{tikzpicture}
+%\resizebox{5.5in}{4.25in}
+%	{
+	\begin{tikzpicture}[]
 		
-    	\draw (-2.25,-2.125) rectangle (2.25,2.125);
-    	\node at (0,0){\large \uppercase{testing }};		
+		% card
+    	\draw (-\cardWidth/2 in,-\cardHeight/2 in) rectangle (\cardWidth/2 in, \cardHeight/2 in);
+    	% title
+    	\node[anchor=north west] at (-\cardWidth/3 in, \cardHeight/2 in) {\cardTitleSty{testing}};		
 		
 	\end{tikzpicture}
-	}
+%	}
 \end{figure}
 
 \end{document}
