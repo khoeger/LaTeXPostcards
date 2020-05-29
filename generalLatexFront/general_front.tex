@@ -4,16 +4,18 @@
 \usepackage{tikz} 			%draw
 
 \usepackage{fontspec}		%Set font
-\setmainfont{Orbit}
+\setmainfont{Orbit}         % special by Evan Pittson Design
 
 % --- Formatting
 \pagenumbering{gobble}
 
 % --- Defined Values
 % Variables 
-\newcommand{\setNumber}{1}
-\newcommand{\cardNumber}{2}
-\newcommand{\cardTitle}{3}
+\newcommand{\setNumber}{#1}
+\newcommand{\cardNumber}{#1}
+\newcommand{\cardTitle}{#1}
+% Send Instructions
+
 
 
 \begin{document}
@@ -24,7 +26,7 @@
 	\begin{tikzpicture}
 		
     	\draw (-2.25,-2.125) rectangle (2.25,2.125);
-    	\node at (0,0){testing};		
+    	\node at (0,0){\large \uppercase{testing }};		
 		
 	\end{tikzpicture}
 	}
