@@ -1,20 +1,30 @@
 \documentclass[12pt, letterpaper]{article}
 
-\usepackage{tikz}
+% --- Packages
+\usepackage{tikz} 			%draw
 
-\usepackage{fontspec}
+\usepackage{fontspec}		%Set font
 \setmainfont{Orbit}
 
-\begin{document}
+% --- Formatting
+\pagenumbering{gobble}
 
-testing
+% --- Defined Values
+% Variables 
+\newcommand{\setNumber}{1}
+\newcommand{\cardNumber}{2}
+\newcommand{\cardTitle}{3}
+
+
+\begin{document}
 
 \begin{figure}
 \resizebox{5.5in}{4.25in}
 	{
 	\begin{tikzpicture}
 		
-    	\draw (0,0) rectangle (5.5,4.25);		
+    	\draw (-2.25,-2.125) rectangle (2.25,2.125);
+    	\node at (0,0){testing};		
 		
 	\end{tikzpicture}
 	}
