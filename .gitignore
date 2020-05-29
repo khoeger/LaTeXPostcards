@@ -3,6 +3,7 @@
 *.aux
 *.log
 *.pdf
+*.dvi
 *.synctex.gz
 *processing
 
