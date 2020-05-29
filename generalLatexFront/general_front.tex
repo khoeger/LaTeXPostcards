@@ -1,7 +1,7 @@
-\documentclass[12pt]{article}
+\documentclass[letterpaper,12pt]{article}
 
 % --- Packages
-\usepackage[paperwidth=5.5in, paperheight=4.25in,margin=0in]{geometry}
+%\usepackage[paperwidth=5.5in, paperheight=4.25in,margin=0in]{geometry}
 
 \usepackage{tikz} 			%draw
 
@@ -15,12 +15,12 @@
 % --- Defined Values
 %% Variables
 \newcommand{\altMargin}{1}
-\newcommand{\cardHeight}{\paperheight-\altMargin}
-\newcommand{\cardWidth}{\paperwidth-\altMargin}
+\newcommand{\cardHeight}{4.25}%{\paperheight-\altMargin}
+\newcommand{\cardWidth}{5.5}%{\paperwidth-\altMargin}
 % Style Variables
 \newcommand{\setNumberSty}[1]{#1}
 \newcommand{\cardNumberSty}[1]{#1}
-\newcommand{ \cardTitleSty }[1]{\raggedright \Huge \uppercase{#1}}
+\newcommand{ \cardTitleSty }[1]{\raggedright \large \uppercase{#1}}
 \newcommand{\qrkNumSty}{ 	QRK 
 											M7_{\setNumber}
 											20200530:\cardNumber-\setNumber/20 
@@ -52,9 +52,10 @@
 	\begin{tikzpicture}[]
 		
 		% card
-    	\draw (-\cardWidth/2 in,-\cardHeight/2 in) rectangle (\cardWidth/2 in, \cardHeight/2 in);
+    	\draw (-2.75,-2.25) rectangle (2.75, 2.25);
     	% title
-    	\node[anchor=north west] at (-\cardWidth/3 in, \cardHeight/2 in) {\cardTitleSty{testing}};		
+    	\node[anchor=north west] at (-2.65, 2.15) {\cardTitleSty{Title Goes Here}};
+    			
 		
 	\end{tikzpicture}
 %	}
