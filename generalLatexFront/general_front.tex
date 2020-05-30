@@ -13,18 +13,21 @@
 
 
 % --- Defined Values
-%% Variables
+% Constants
 \newcommand{\altMargin}{1}
 \newcommand{\cardHeight}{4.25}%{\paperheight-\altMargin}
 \newcommand{\cardWidth}{5.5}%{\paperwidth-\altMargin}
-% Style Variables
+% Set Specific Variables
 \newcommand{\setNumber}{0}
 \newcommand{\cardNumber}{1}
-\newcommand{ \cardTitleSty }[1]{\raggedright \uppercase{#1}}
+\newcommand{\cardTitle}{title goes here}
 \newcommand{\qrkNumSty}{ 	 QRK M$7_{\setNumber} 20200530:\cardNumber-\setNumber/20$ T$9$ }
+% Styling
+\newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
+\newcommand{ \personSty }[1]{\raggedright \normalsize \MakeUppercase #1}
 % Instructions For
 \newcommand{\sender}{Sender}
-\newcommand{\recipient}{Before Reading}
+\newcommand{\recipient}{Recipient}
 % Instructions
 \newcommand{\single}[1]{#1}							
 \newcommand{\double}[2]{#1,#2}
@@ -52,20 +55,20 @@
     	\draw (-2.75,-2.25) rectangle (2.75, 2.25);
     	
     	% title
-    	\node[anchor=north west] at (-2.80, 2.15) {\cardTitleSty{ \large Title Goes Here}};
+    	\node[anchor=north west] at (-2.80, 2.15) { \cardTitleSty{\cardTitle}};
     	
     	% QRK Number
     	\node[anchor=south west] at (-2.70, -2.25) { \tiny \qrkNumSty};
 
     	% sender label  - on
-    	\node[anchor=north east, rotate = 90] at (-2.65,1.5) {\cardTitleSty{ \normalsize Sender }};
+    	\node[anchor=north east, rotate = 90] at (-2.65,1.5) {\personSty{\sender}};
 %    	 % sender label  - off
-%    	\node[anchor=north east, rotate = 90, text = black!20!white] at (-2.65,1.5) {\cardTitleSty{ \normalsize Sender }};
+%    	\node[anchor=north east, rotate = 90, text = black!20!white] at (-2.65,1.5) {\personSty{\sender}};
 
     	% recipient label - on
-    	\node[anchor=north east, rotate = -90 ] at (2.645, -2.03) {\cardTitleSty{\normalsize Recipient}};
+    	\node[anchor=north east, rotate = -90 ] at (2.645, -2.03) {\personSty{\recipient}};
 %    	% recipient label - off
-%    	\node[anchor=north east, rotate = -90, text = black!20!white ] at (2.645, -2.03) {\cardTitleSty{\normalsize Recipient}};
+%    	\node[anchor=north east, rotate = -90, text = black!20!white ] at (2.645, -2.03) {\personSty{\recipient}}
     			
 		
 	\end{tikzpicture}
