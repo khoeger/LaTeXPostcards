@@ -18,11 +18,14 @@
 \newcommand{\cardHeight}{4.25}%{\paperheight-\altMargin}
 \newcommand{\cardWidth}{5.5}%{\paperwidth-\altMargin}
 \newcommand{\lrMarginStart}{2.7}
+\newcommand{\udMarginStart}{2.2}
+\newcommand{\senderNAnchor}{1.5}
+\newcommand{\recipSAnchor}{-2.03}
 % Set Specific Variables
 \newcommand{\setNumber}{0}
 \newcommand{\cardNumber}{1}
 \newcommand{\cardTitle}{title goes here}
-\newcommand{\qrkNumSty}{QRK M$7_{\setNumber} 20200530:\cardNumber-\setNumber/20$ T$9$ }
+\newcommand{\qrkNumSty}{QRK$\;$M$7_{\setNumber}\;20200530:\cardNumber/20\smile\setNumber/20\;$T$9$ }
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
 \newcommand{ \personSty }[1]{\raggedright \normalsize \MakeUppercase #1}
@@ -56,20 +59,20 @@
     	\draw (-2.75,-2.25) rectangle (2.75, 2.25);
     	
     	% title
-    	\node[anchor=north west] at (-\lrMarginStart, 2.25) { \cardTitleSty{\cardTitle}};
+    	\node[anchor=north west] at (-\lrMarginStart,\udMarginStart) { \cardTitleSty{\cardTitle}};
     	
     	% QRK Number
-    	\node[anchor=south west] at (-\lrMarginStart, -2.25) { \tiny \qrkNumSty};
+    	\node[anchor=south west] at (-\lrMarginStart, -\udMarginStart) { \tiny \qrkNumSty};
 
     	% sender label  - on
-    	\node[anchor=north east, rotate = 90] at (-\lrMarginStart,1.5) {\personSty{\sender}};
+    	\node[anchor=north east, rotate = 90] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};
 %    	 % sender label  - off
-%    	\node[anchor=north east, rotate = 90, text = black!20!white] at (\lrMarginStart,1.5) {\personSty{\sender}};
+%    	\node[anchor=north east, rotate = 90, text = black!20!white] at (\lrMarginStart,\senderNAnchor) {\personSty{\sender}};
 
     	% recipient label - on
-    	\node[anchor=north east, rotate = -90 ] at (\lrMarginStart, -2.03) {\personSty{\recipient}};
+    	\node[anchor=north east, rotate = -90 ] at (\lrMarginStart, \recipSAnchor) {\personSty{\recipient}};
 %    	% recipient label - off
-%    	\node[anchor=north east, rotate = -90, text = black!20!white ] at (\lrMarginStart, -2.03) {\personSty{\recipient}}
+%    	\node[anchor=north east, rotate = -90, text = black!20!white ] at (\lrMarginStart,\recipSAnchor) {\personSty{\recipient}}
     			
 		
 	\end{tikzpicture}
