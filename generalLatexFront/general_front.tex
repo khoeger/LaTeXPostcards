@@ -18,15 +18,12 @@
 \newcommand{\cardHeight}{4.25}%{\paperheight-\altMargin}
 \newcommand{\cardWidth}{5.5}%{\paperwidth-\altMargin}
 % Style Variables
-\newcommand{\setNumberSty}[1]{#1}
-\newcommand{\cardNumberSty}[1]{#1}
-\newcommand{ \cardTitleSty }[1]{\raggedright \large \uppercase{#1}}
-\newcommand{\qrkNumSty}{ 	QRK 
-											M7_{\setNumber}
-											20200530:\cardNumber-\setNumber/20 
-											T9}
+\newcommand{\setNumber}{0}
+\newcommand{\cardNumber}{1}
+\newcommand{ \cardTitleSty }[1]{\raggedright \uppercase{#1}}
+\newcommand{\qrkNumSty}{ 	 QRK M$7_{\setNumber} 20200530:\cardNumber-\setNumber/20$ T$9$ }
 % Instructions For
-\newcommand{\sender}{Before Sending}
+\newcommand{\sender}{Sender}
 \newcommand{\recipient}{Before Reading}
 % Instructions
 \newcommand{\single}[1]{#1}							
@@ -53,8 +50,27 @@
 		
 		% card
     	\draw (-2.75,-2.25) rectangle (2.75, 2.25);
+    	
     	% title
-    	\node[anchor=north west] at (-2.65, 2.15) {\cardTitleSty{Title Goes Here}};
+    	\node[anchor=north west] at (-2.80, 2.15) {\cardTitleSty{ \large Title Goes Here}};
+    	
+    	% QRK Number
+    	\node[anchor=south west] at (-2.70, -2.25) { \tiny \qrkNumSty};
+    	
+%    	% sender reflection
+%    	\node[anchor=south west, rotate = -90, text = black!30!white ] at (-2.36, 1.63) {\cardTitleSty{ \normalsize Sender }};
+    	% sender label  - on
+    	\node[anchor=north east, rotate = 90] at (-2.65,1.5) {\cardTitleSty{ \normalsize Sender }};
+    	 % sender label  - off
+    	\node[anchor=north east, rotate = 90, text = black!20!white] at (-2.65,1.5) {\cardTitleSty{ \normalsize Sender }};
+    	
+%    	% recipient reflection 
+%    	\node[anchor=south west, rotate = 90, text = black!20!white] at (2.65,-2.25) {\cardTitleSty{ \normalsize Recipient }}; % 2.345 for label if uncomment relfection
+
+    	% recipient label - on
+    	\node[anchor=north east, rotate = -90 ] at (2.645, -2.03) {\cardTitleSty{\normalsize Recipient}};
+%    	% recipient label - off
+%    	\node[anchor=north east, rotate = -90, text = black!20!white ] at (2.645, -2.03) {\cardTitleSty{\normalsize Recipient}};
     			
 		
 	\end{tikzpicture}
