@@ -1,7 +1,15 @@
-\documentclass[letterpaper,12pt]{article}
+%\documentclass[letterpaper,12pt]{article}
+\documentclass[12pt]{book}
+
+% page dimensions
+\newcommand{\cardHeight}{4.25}
+\newcommand{\cardWidth}{5.5}
+\newcommand{\halfHeight}{2.125}
+\newcommand{\halfWidth}{2.75}
 
 % --- Packages
-%\usepackage[paperwidth=5.5in, paperheight=4.25in,margin=0in]{geometry}
+\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+%\usepackage[landscape]{geometry}
 
 \usepackage{tikz} 			%draw
 
@@ -10,8 +18,11 @@
 
 \usepackage{ifthen}			% if then else
 
+
+
 % --- Formatting
 \pagenumbering{gobble}
+\setlength{\parindent}{0pt}
 
 
 % --- Defined Values
@@ -27,12 +38,18 @@
 \newcommand{\recipient}{Recipient}
 
 % Set Specific Variables
+\newcommand{\setNumberStart}{0}
+\newcommand{\setNumberEnd}{5}
+\newcommand{\setNumberIncrement}{1}
+\newcommand{\cardNumberStart}{1}
+\newcommand{\cardNumberEnd}{5}
+\newcommand{\cardNumberIncrement}{1}
 \newcommand{\setNumber}{0}
-\newcommand{\cardNumber}{1}
+%\newcommand{\cardNumber}{1}
 \newcommand{\cardTitle}{title goes here}
 \newcommand{\senderOn}{0}
 \newcommand{\recipientOn}{0}
-\newcommand{\qrkNumber}{QRK$\;$M$7_{\setNumber}\;20200530:\cardNumber/20\smile\setNumber/20\;$T$9$ }
+%\newcommand{\qrkNumber}{QRK$\;$M$7_{\setNumber}\;20200530:\cardNumber/20\smile\setNumber/20\;$T$9$ }
 
 
 
@@ -59,36 +76,15 @@
 
 \begin{document}
 
-\begin{figure}
-%\resizebox{5.5in}{4.25in}
-%	{
-	\begin{tikzpicture}[]
-		
-		% card
-    	\draw (-2.75,-2.25) rectangle (2.75, 2.25);
-    	
-    	% title
-    	\node[anchor=north west] at (-\lrMarginStart,\udMarginStart) { \cardTitleSty{\cardTitle}};
-    	
-    	% QRK Number
-    	\node[anchor=south west] at (-\lrMarginStart, -\udMarginStart) { \tiny \qrkNumber};
-
-    	% sender label 
-    	\ifthenelse{\senderOn = 1}
-    					 % for the sender
-    					 {\node[anchor=north east, rotate = 90] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};}
-    					 % not for sender
-    					 {\node[anchor=north east, rotate = 90, text = black!20!white] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};} 
-
-    	% recipient label 
-    	\ifthenelse{\recipientOn = 1}
-    					 % for the recipient
-    					 {\node[anchor=north east, rotate = -90 ] at (\lrMarginStart, \recipientSAnchor) {\personSty{\recipient}};}
-    					 % not for recipient
-    					 {\node[anchor=north east, rotate = -90, text = black!20!white ] at (\lrMarginStart,\recipientSAnchor) {\personSty{\recipient}};} 
-		
-	\end{tikzpicture}
-
-\end{figure}
-
+	\foreach \card in {\cardNumberStart,...,\cardNumberEnd}
+	{	
+		%\newcommand{\cardNumber}{\card}
+		\begin{center}
+			\begin{figure}
+				\resizebox{\paperwidth}{\paperheight}
+				{ \input{general_card_details.tex}}
+			\end{figure}
+		\end{center}
+	}
+	
 \end{document}
