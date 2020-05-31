@@ -1,8 +1,6 @@
 %Generate QRK Number
 \newcommand{\qrkNumber}{QRK$\;$M$7_{\iterationNumber}\;20200530:\card/20\smile\set/20\;$T$9$ }
-
-\begin{tikzpicture}[]
-		
+\begin{tikzpicture}[]	
 		% card
     	\draw (-\halfWidth,-\halfHeight) rectangle (\halfWidth,\halfHeight);
     	
@@ -25,5 +23,9 @@
     					 {\node[anchor=north east, rotate = -90 ] at (\lrMarginStart, \recipientSAnchor) {\personSty{\recipient}};}
     					 % not for recipient
     					 {\node[anchor=north east, rotate = -90, text = black!20!white ] at (\lrMarginStart,\recipientSAnchor) {\personSty{\recipient}};} 
-		
+    					 
+    	% instructions
+    	\node[anchor = north west] at (-1.5, 0.9) { \instructionFormatting{\tripleOne} } ;
+    	\node[anchor = north west] at (-1.5, 0.4) {\instructionFormatting{\tripleTwo}} ;
+    	\node[anchor = north west] at (-1.5, -0.1) {\instructionFormatting{\tripleThree}} ;		
 \end{tikzpicture}

@@ -41,17 +41,16 @@
 \newcommand{\setNumberEnd}{0}
 \newcommand{\cardNumberStart}{1}
 \newcommand{\cardNumberEnd}{1}
-\newcommand{\cardTitle}{title goes here}
-%\newcommand{\senderOn}{0}
-%\newcommand{\recipientOn}{0}
+%\newcommand{\cardTitle}{title goes here}
 
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
 \newcommand{ \personSty }[1]{\raggedright \normalsize \MakeUppercase #1}
 % Instructions
+\newcommand{\instructionFormatting}[1]{\small \MakeLowercase #1}
 \newcommand{\single}[1]{#1}							
 \newcommand{\double}[2]{#1,#2}
-\newcommand{\triple}[3]{#1,#2,3}
+\newcommand{\triple}[3]{\tiny \MakeLowercase #1\\#2\\#3\\}
 \newcommand{\singleSingle}[2]{#1,#2}
 \newcommand{\doubleSingle}[3]{#1,#2,#3}
 \newcommand{\tripleSingle}[4]{#1,#2,#3,#4}
@@ -65,15 +64,20 @@
 
 
 \begin{document}
-
 	\foreach \card in {\cardNumberStart,...,\cardNumberEnd}
 	{	
 		 % --- Set sender value	and  recipient value
 		\input{setCardTypes.tex}
-	
-		\foreach \set in {\setNumberStart,...,\setNumberEnd}
-		{	
-			\input{card1details.tex}
+		
+		% --- Identify Card Numbers
+		\ifthenelse{ \card = 1
+		}{ % card 1 details set
+		   \input{setcard1constants.tex}	
+			\foreach \set in {\setNumberStart,...,\setNumberEnd}
+			{	
+				\input{card1details.tex}
+			}
+		}{ % card > 1
 		}
 	}
 	
