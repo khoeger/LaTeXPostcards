@@ -39,13 +39,11 @@
 \newcommand{\iterationNumber}{1}
 \newcommand{\setNumberStart}{0}
 \newcommand{\setNumberEnd}{3}
-\newcommand{\cardNumberStart}{1}
-\newcommand{\cardNumberEnd}{3}
-\newcommand{\setNumber}{0}
-%\newcommand{\cardNumber}{1}
+\newcommand{\cardNumberStart}{6}
+\newcommand{\cardNumberEnd}{16}
 \newcommand{\cardTitle}{title goes here}
-\newcommand{\senderOn}{0}
-\newcommand{\recipientOn}{0}
+%\newcommand{\senderOn}{0}
+%\newcommand{\recipientOn}{0}
 
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
@@ -70,8 +68,11 @@
 
 	\foreach \card in {\cardNumberStart,...,\cardNumberEnd}
 	{	
+		 % --- Set sender value	and  recipient value
+		\input{setCardTypes.tex}
+	
 		\foreach \set in {\setNumberStart,...,\setNumberEnd}
-		{
+		{	
 			\begin{center}
 				\begin{figure}
 					\resizebox{\paperwidth}{\paperheight}
