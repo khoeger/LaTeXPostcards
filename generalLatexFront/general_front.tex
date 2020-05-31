@@ -8,6 +8,8 @@
 \usepackage{fontspec}		%Set font
 \setmainfont{Orbit}         % special by Evan Pittson Design
 
+\usepackage{ifthen}			% if then else
+
 % --- Formatting
 \pagenumbering{gobble}
 
@@ -15,23 +17,24 @@
 % --- Defined Values
 % Constants
 \newcommand{\altMargin}{1}
-\newcommand{\cardHeight}{4.25}%{\paperheight-\altMargin}
-\newcommand{\cardWidth}{5.5}%{\paperwidth-\altMargin}
+%\newcommand{\cardHeight}{4.25}
+%\newcommand{\cardWidth}{5.5}
 \newcommand{\lrMarginStart}{2.7}
 \newcommand{\udMarginStart}{2.2}
 \newcommand{\senderNAnchor}{1.7}
-\newcommand{\recipSAnchor}{-1.9}
+\newcommand{\recipientSAnchor}{-1.9}
+\newcommand{\sender}{Sender}
+\newcommand{\recipient}{Recipient}
 % Set Specific Variables
 \newcommand{\setNumber}{0}
 \newcommand{\cardNumber}{1}
 \newcommand{\cardTitle}{title goes here}
+\newcommand{\senderOn}{0}
+\newcommand{\recipientOn}{0}
 \newcommand{\qrkNumSty}{QRK$\;$M$7_{\setNumber}\;20200530:\cardNumber/20\smile\setNumber/20\;$T$9$ }
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
 \newcommand{ \personSty }[1]{\raggedright \normalsize \MakeUppercase #1}
-% Instructions For
-\newcommand{\sender}{Sender}
-\newcommand{\recipient}{Recipient}
 % Instructions
 \newcommand{\single}[1]{#1}							
 \newcommand{\double}[2]{#1,#2}
@@ -64,19 +67,22 @@
     	% QRK Number
     	\node[anchor=south west] at (-\lrMarginStart, -\udMarginStart) { \tiny \qrkNumSty};
 
-    	% sender label  - on
-    	\node[anchor=north east, rotate = 90] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};
-%    	 % sender label  - off
-%    	\node[anchor=north east, rotate = 90, text = black!20!white] at (\lrMarginStart,\senderNAnchor) {\personSty{\sender}};
+    	% sender label 
+    	\ifthenelse{\senderOn = 1}
+    					 % for the sender
+    					 {\node[anchor=north east, rotate = 90] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};}
+    					 % not for sender
+    					 {\node[anchor=north east, rotate = 90, text = black!20!white] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};} 
 
-    	% recipient label - on
-    	\node[anchor=north east, rotate = -90 ] at (\lrMarginStart, \recipSAnchor) {\personSty{\recipient}};
-%    	% recipient label - off
-%    	\node[anchor=north east, rotate = -90, text = black!20!white ] at (\lrMarginStart,\recipSAnchor) {\personSty{\recipient}}
-    			
+    	% recipient label 
+    	\ifthenelse{\recipientOn = 1}
+    					 % for the recipient
+    					 {\node[anchor=north east, rotate = -90 ] at (\lrMarginStart, \recipientSAnchor) {\personSty{\recipient}};}
+    					 % not for recipient
+    					 {\node[anchor=north east, rotate = -90, text = black!20!white ] at (\lrMarginStart,\recipientSAnchor) {\personSty{\recipient}};} 
 		
 	\end{tikzpicture}
-%	}
+
 \end{figure}
 
 \end{document}
