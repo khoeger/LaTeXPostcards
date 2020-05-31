@@ -25,13 +25,19 @@
 \newcommand{\recipientSAnchor}{-1.9}
 \newcommand{\sender}{Sender}
 \newcommand{\recipient}{Recipient}
+
 % Set Specific Variables
 \newcommand{\setNumber}{0}
 \newcommand{\cardNumber}{1}
 \newcommand{\cardTitle}{title goes here}
 \newcommand{\senderOn}{0}
 \newcommand{\recipientOn}{0}
-\newcommand{\qrkNumSty}{QRK$\;$M$7_{\setNumber}\;20200530:\cardNumber/20\smile\setNumber/20\;$T$9$ }
+\newcommand{\qrkNumber}{QRK$\;$M$7_{\setNumber}\;20200530:\cardNumber/20\smile\setNumber/20\;$T$9$ }
+
+
+
+
+
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
 \newcommand{ \personSty }[1]{\raggedright \normalsize \MakeUppercase #1}
@@ -65,7 +71,7 @@
     	\node[anchor=north west] at (-\lrMarginStart,\udMarginStart) { \cardTitleSty{\cardTitle}};
     	
     	% QRK Number
-    	\node[anchor=south west] at (-\lrMarginStart, -\udMarginStart) { \tiny \qrkNumSty};
+    	\node[anchor=south west] at (-\lrMarginStart, -\udMarginStart) { \tiny \qrkNumber};
 
     	% sender label 
     	\ifthenelse{\senderOn = 1}
