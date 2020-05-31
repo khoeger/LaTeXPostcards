@@ -28,8 +28,6 @@
 % --- Defined Values
 % Constants
 \newcommand{\altMargin}{1}
-%\newcommand{\cardHeight}{4.25}
-%\newcommand{\cardWidth}{5.5}
 \newcommand{\lrMarginStart}{2.7}
 \newcommand{\udMarginStart}{2.2}
 \newcommand{\senderNAnchor}{1.7}
@@ -38,22 +36,16 @@
 \newcommand{\recipient}{Recipient}
 
 % Set Specific Variables
+\newcommand{\iterationNumber}{1}
 \newcommand{\setNumberStart}{0}
-\newcommand{\setNumberEnd}{5}
-\newcommand{\setNumberIncrement}{1}
+\newcommand{\setNumberEnd}{3}
 \newcommand{\cardNumberStart}{1}
-\newcommand{\cardNumberEnd}{5}
-\newcommand{\cardNumberIncrement}{1}
+\newcommand{\cardNumberEnd}{3}
 \newcommand{\setNumber}{0}
 %\newcommand{\cardNumber}{1}
 \newcommand{\cardTitle}{title goes here}
 \newcommand{\senderOn}{0}
 \newcommand{\recipientOn}{0}
-%\newcommand{\qrkNumber}{QRK$\;$M$7_{\setNumber}\;20200530:\cardNumber/20\smile\setNumber/20\;$T$9$ }
-
-
-
-
 
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
@@ -78,13 +70,15 @@
 
 	\foreach \card in {\cardNumberStart,...,\cardNumberEnd}
 	{	
-		%\newcommand{\cardNumber}{\card}
-		\begin{center}
-			\begin{figure}
-				\resizebox{\paperwidth}{\paperheight}
-				{ \input{general_card_details.tex}}
-			\end{figure}
-		\end{center}
+		\foreach \set in {\setNumberStart,...,\setNumberEnd}
+		{
+			\begin{center}
+				\begin{figure}
+					\resizebox{\paperwidth}{\paperheight}
+					{ \input{general_card_details.tex}}
+				\end{figure}
+			\end{center}
+		}
 	}
 	
 \end{document}
