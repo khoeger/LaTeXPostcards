@@ -30,7 +30,11 @@
 \newcommand{\lrMarginStart}{2.7}
 \newcommand{\udMarginStart}{2.2}
 \newcommand{\senderNAnchor}{1.7}
-\newcommand{\recipientSAnchor}{-1.75}
+\newcommand{\recipientSAnchor}{-1.5}
+\newcommand{\sendInstructionsX}{-2}
+\newcommand{\sendInstructionsY}{1.5}
+\newcommand{\recipInstructionsX}{2}
+\newcommand{\recipInstructionsY}{-1.25}
 \newcommand{\sender}{Sender}
 \newcommand{\recipient}{Recipient}
 
@@ -62,7 +66,7 @@
 		% ---
 		%    Input Card Details
 		% ---			
-		% - 2 line recipient: 11, 12
+		
 		% - 3 line cards: 1, 3, 
 		% - 3 line recipient:10, 13
 		% - 4 line cards: 2
@@ -109,29 +113,40 @@
 				% card 4
 				\ifthenelse{\card = 4}
 				{
-					%card 1 constants
+					%card 5 constants
 					\input{card_4_constants.tex}	
-					% generate card 7 set
+					% generate card 5 set
 					\input{generate_sender_2line.tex}
 				}
 				{
 					% card 5
 					\ifthenelse{\card = 5}
 					{
-						%card 1 constants
+						%card 5 constants
 						\input{card_5_constants.tex}	
-						% generate card 7 set
+						% generate card 5 set
 						\input{generate_sender_2line.tex}
 					}
 					{
-						% card 6
-						YES:\card
+						%card 6
+						\input{card_6_constants.tex}	
+						% generate card 6 set
+						\input{generate_sender_2line.tex}
 					}
 				}
 			}
-			NO
-			%Cards 1,2,3,10,11,12,13,14,15,16,17,18,19,20
-			
+			% 2 line recipient cards
+			{	
+				% - 2 line recipient: 11, 12
+				\ifthenelse{\card=11 \OR \card=12}
+				{
+					YES:\card
+				}
+				{ 	
+					NO
+					%Cards 1,2,3,10,13,14,15,16,17,18,19,20
+				}
+			}
 		}
 	}
 \end{document}
