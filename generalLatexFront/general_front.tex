@@ -71,7 +71,7 @@
 		\ifthenelse{ \card = 7 \OR \card = 8 \OR \card = 9
 		}{ % Set individual card details 
 
-			% card 7 
+			% card 7  - sender 1 liner
 			\ifthenelse{\card = 7}
 			{
 				% card 7 constants
@@ -79,7 +79,7 @@
 				% generate card 7 set
 				\input{generate_card_7.tex}
 			}
-			% card 8 
+			% card 8 - recipient 1 liner
 			{ \ifthenelse{\card =8}
 				{	
 					% card 7 constants
@@ -87,7 +87,7 @@
 					% generate card 7 set
 					\input{generate_card_8.tex}
 				}
-				% card 9
+				% card 9 - recipent 1 liner
 				{	
 					NO:\card
 				}
