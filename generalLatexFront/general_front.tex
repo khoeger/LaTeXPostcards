@@ -39,7 +39,7 @@
 \newcommand{\setNumberStart}{0}
 \newcommand{\setNumberEnd}{0}
 \newcommand{\cardNumberStart}{7}
-\newcommand{\cardNumberEnd}{7}
+\newcommand{\cardNumberEnd}{8}
 
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
@@ -79,13 +79,23 @@
 				% generate card 7 set
 				\input{generate_card_7.tex}
 			}
-			{NO}			
+			% card 8 
+			{ \ifthenelse{\card =8}
+				{	
+					YES:\card
+				}
+				% card 9
+				{	
+					NO:\card
+				}
+			}			
 			
 
 			
-		}{ 
-			% - card > 1
-			NO
+		}
+		% Cards with more than 1 line
+		{ 
+			Cards 1,2,3,4,5,6,10,11,12,13,14,15,16,17,18,19,20
 		}
 	}
 	
