@@ -140,7 +140,9 @@
 				% - 2 line recipient: 11, 12
 				\ifthenelse{\card=11 \OR \card=12}
 				{
-					YES:\card
+					\ifthenelse{\card=11}
+					{YES:\card}
+					{NO:\card}
 				}
 				{ 	
 					NO
