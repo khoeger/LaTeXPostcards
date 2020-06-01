@@ -105,17 +105,21 @@
 		{ 	
 			% - 2 line sender cards: 4, 5,  6, 
 			\ifthenelse{ \card = 4 \OR \card = 5 \OR \card = 6}
-			{	YES:\card
-				% card 4
+			{	
+				\ifthenelse{\card = 4}
+				{
+					%card 1 constants
+					\input{card_4_constants.tex}	
+					% generate card 7 set
+					\input{generate_sender_2line.tex}
+				}
+				{
+				YES:\card
+				}
 			}
-			{NO:\card}
-			%NO:\card\\
-			%Cards 1,2,3,4,5,6,10,11,12,13,14,15,16,17,18,19,20
-			% card 1 constants
-%					\input{card_1_constants.tex}	
-%					% generate card 7 set
-%					\input{generate_card_1.tex}
+			NO
+			%Cards 1,2,3,10,11,12,13,14,15,16,17,18,19,20
+			
 		}
 	}
-	
 \end{document}
