@@ -38,8 +38,8 @@
 \newcommand{\iterationNumber}{1}
 \newcommand{\setNumberStart}{0}
 \newcommand{\setNumberEnd}{0}
-\newcommand{\cardNumberStart}{5}
-\newcommand{\cardNumberEnd}{9}
+\newcommand{\cardNumberStart}{7}
+\newcommand{\cardNumberEnd}{7}
 
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
@@ -70,11 +70,26 @@
 		% - 1 line cards
 		\ifthenelse{ \card = 7 \OR \card = 8 \OR \card = 9
 		}{ % Set individual card details 
-			YES
-%			% card 1 constants
-%			\input{card_1_constants.tex}	
-%			% generate card 1 for each set
-%			\input{card_1_details.tex}
+
+			% card 7 
+			\ifthenelse{\card = 7}
+			{
+				% card 1 constants
+				\input{card_7_constants.tex}	
+				% generate card 1 for each set
+				\foreach \set in {\setNumberStart,...,\setNumberEnd}
+				{	\begin{center}
+					\begin{figure}
+						\resizebox{\paperwidth}{\paperheight}
+						{ \input{card_1_layout.tex}}
+					\end{figure}
+				\end{center}
+				}
+			}
+			{NO}			
+			
+
+			
 		}{ 
 			% - card > 1
 			NO
