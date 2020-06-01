@@ -141,8 +141,17 @@
 				\ifthenelse{\card=11 \OR \card=12}
 				{
 					\ifthenelse{\card=11}
-					{YES:\card}
-					{NO:\card}
+					{
+						% card 11
+						%card 6
+						\input{card_11_constants.tex}	
+						% generate card 6 set
+						\input{generate_recipient_2line.tex}
+					}
+					{	
+						% card 12
+						NO:\card
+					}
 				}
 				{ 	
 					NO
