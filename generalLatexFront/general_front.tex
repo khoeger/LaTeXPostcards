@@ -82,7 +82,10 @@
 			% card 8 
 			{ \ifthenelse{\card =8}
 				{	
-					YES:\card
+					% card 7 constants
+					\input{card_8_constants.tex}	
+					% generate card 7 set
+					\input{generate_card_8.tex}
 				}
 				% card 9
 				{	
