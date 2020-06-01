@@ -17,7 +17,7 @@
 
 \usepackage{ifthen}			% if then else
 
-
+\usepackage{amsmath}
 
 % --- Formatting
 \pagenumbering{gobble}
@@ -30,7 +30,7 @@
 \newcommand{\lrMarginStart}{2.7}
 \newcommand{\udMarginStart}{2.2}
 \newcommand{\senderNAnchor}{1.7}
-\newcommand{\recipientSAnchor}{-1.9}
+\newcommand{\recipientSAnchor}{-1.75}
 \newcommand{\sender}{Sender}
 \newcommand{\recipient}{Recipient}
 
@@ -38,9 +38,9 @@
 \newcommand{\runDate}{20200530}
 \newcommand{\multipleNum}{7}
 \newcommand{\projectNum}{9}
+\newcommand{\iterationNumber}{1}
 
 % Set Specific Variables
-\newcommand{\iterationNumber}{1}
 \newcommand{\setNumberStart}{0}
 \newcommand{\setNumberEnd}{0}
 \newcommand{\cardNumberStart}{6}
@@ -107,12 +107,12 @@
 		}
 		% Cards with more than 1 line
 		{ 	
-			\card\\
-			Cards 1,2,3,4,5,6,10,11,12,13,14,15,16,17,18,19,20
+			NO:\card\\
+			%Cards 1,2,3,4,5,6,10,11,12,13,14,15,16,17,18,19,20
 			% card 1 constants
-					\input{card_1_constants.tex}	
-					% generate card 7 set
-					\input{generate_card_1.tex}
+%					\input{card_1_constants.tex}	
+%					% generate card 7 set
+%					\input{generate_card_1.tex}
 		}
 	}
 	

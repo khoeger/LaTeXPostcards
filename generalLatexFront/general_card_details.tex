@@ -1,6 +1,9 @@
 %Generate QRK Number
 %\newcommand{\qrkNumber}{QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:\card/20\smile\set/20\;$T$\projectNum$ }
-\newcommand{\qrkNumber}{QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:$
+\newcommand{\qrkNumber}{QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:\begin{matrix}
+\card \in \{ \cardNumberStart, \dots , \cardNumberEnd\}\\
+\set \subset \{ \setNumberStart, \dots , \setNumberEnd\} 
+\end{matrix}$}
 %\card/20\smile\set/20\;$T$\projectNum$ }
 \begin{tikzpicture}[]	
 		% card
