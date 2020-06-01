@@ -74,17 +74,10 @@
 			% card 7 
 			\ifthenelse{\card = 7}
 			{
-				% card 1 constants
+				% card 7 constants
 				\input{card_7_constants.tex}	
-				% generate card 1 for each set
-				\foreach \set in {\setNumberStart,...,\setNumberEnd}
-				{	\begin{center}
-					\begin{figure}
-						\resizebox{\paperwidth}{\paperheight}
-						{ \input{card_1_layout.tex}}
-					\end{figure}
-				\end{center}
-				}
+				% generate card 7 set
+				\input{generate_card_7.tex}
 			}
 			{NO}			
 			
