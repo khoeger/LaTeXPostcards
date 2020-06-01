@@ -40,7 +40,7 @@
 \newcommand{\setNumberStart}{0}
 \newcommand{\setNumberEnd}{0}
 \newcommand{\cardNumberStart}{1}
-\newcommand{\cardNumberEnd}{1}
+\newcommand{\cardNumberEnd}{5}
 %\newcommand{\cardTitle}{title goes here}
 
 % Styling
@@ -67,17 +67,17 @@
 	\foreach \card in {\cardNumberStart,...,\cardNumberEnd}
 	{	
 		 % --- Set sender value	and  recipient value
-		\input{setCardTypes.tex}
+		\input{set_card_types.tex}
 		
-		% --- Identify Card Numbers
+		% --- Input Card Details
+		
+		% - card 1
 		\ifthenelse{ \card = 1
-		}{ % card 1 details set
-		   \input{setcard1constants.tex}	
-			\foreach \set in {\setNumberStart,...,\setNumberEnd}
-			{	
-				\input{card1details.tex}
-			}
-		}{ % card > 1
+		}{ % Set Card 1 Details
+		   \input{card_1_details.tex}
+		}{ 
+			% - card > 1
+			
 		}
 	}
 	

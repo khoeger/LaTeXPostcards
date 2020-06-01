@@ -1,0 +1,31 @@
+%Generate QRK Number
+\newcommand{\qrkNumber}{QRK$\;$M$7_{\iterationNumber}\;20200530:\card/20\smile\set/20\;$T$9$ }
+\begin{tikzpicture}[]	
+		% card
+    	\draw (-\halfWidth,-\halfHeight) rectangle (\halfWidth,\halfHeight);
+    	
+    	% title
+    	\node[anchor=north west] at (-\lrMarginStart,\udMarginStart) { \cardTitleSty{\cardTitle}};
+    	
+    	% QRK Number
+    	\node[anchor=south west] at (-\lrMarginStart, -\udMarginStart) { \tiny \qrkNumber};
+
+    	% sender label 
+    	\ifthenelse{\senderOn = 1}
+    					 % for the sender
+    					 {\node[anchor=north east, rotate = 90] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};}
+    					 % not for sender
+    					 {\node[anchor=north east, rotate = 90, text = black!20!white] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};} 
+
+    	% recipient label 
+    	\ifthenelse{\recipientOn = 1}
+    					 % for the recipient
+    					 {\node[anchor=north east, rotate = -90 ] at (\lrMarginStart, \recipientSAnchor) {\personSty{\recipient}};}
+    					 % not for recipient
+    					 {\node[anchor=north east, rotate = -90, text = black!20!white ] at (\lrMarginStart,\recipientSAnchor) {\personSty{\recipient}};} 
+    					 
+    	% instructions
+    	\node[anchor = north west] at (-1.5, 0.9) { \instructionFormatting{\tripleOne} } ;
+    	\node[anchor = north west] at (-1.5, 0.4) {\instructionFormatting{\tripleTwo}} ;
+    	\node[anchor = north west] at (-1.5, -0.1) {\instructionFormatting{\tripleThree}} ;		
+\end{tikzpicture}

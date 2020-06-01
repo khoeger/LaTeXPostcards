@@ -1,0 +1,20 @@
+\ifthenelse{\card < 1}
+		{ % for preamble cards
+			\newcommand{\senderOn}{0}
+			\newcommand{\recipientOn}{0}
+		}{ % for sender cards
+			\ifthenelse{\card < 8}
+			{
+			\newcommand{\senderOn}{1}
+			\newcommand{\recipientOn}{0}
+			}{ % for recipient cards
+			   \ifthenelse{\card < 14}
+				{
+				\newcommand{\senderOn}{0}
+				\newcommand{\recipientOn}{1}
+			    }{ % for joint cards
+				    \newcommand{\senderOn}{1}
+					\newcommand{\recipientOn}{1}
+				 }
+				}
+			}	
