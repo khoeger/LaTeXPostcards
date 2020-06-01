@@ -1,8 +1,8 @@
 %Generate QRK Number
-\newcommand{\qrkNumber}{QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:\begin{matrix}
-\card \in \{ \cardNumberStart, \dots , \cardNumberEnd\}\\
-\set \subset \{ \setNumberStart, \dots , \setNumberEnd\} 
-\end{matrix}$}
+\newcommand{\qrkNumber}{QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:\begin{matrix*}[l]
+\card \in \{ \cardNumberStart, \dots , \cardNumberEnd\} = S_{\set}\\
+S_{\set} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} 
+\end{matrix*}$}
 \begin{tikzpicture}[]	
 		% card
     	\draw (-\halfWidth,-\halfHeight) rectangle (\halfWidth,\halfHeight);
