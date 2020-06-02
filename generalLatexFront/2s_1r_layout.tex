@@ -29,7 +29,8 @@ S_{\set} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\}
 
     	% instructions - sender
     	\node[anchor = north west] at (\sendInstructionsX, \sendInstructionsY) { \instructionFormatting{\instructionsOneS} } ;
-    	% instructions - recipient
+			\node[anchor = north west] at (\sendInstructionsX, \sendInstructionsY-0.5) { \instructionFormatting{\instructionsTwoS} } ;
+			% instructions - recipient
 	\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY) { \instructionFormatting{\instructionsOneR} } ;
 
 \end{tikzpicture}
