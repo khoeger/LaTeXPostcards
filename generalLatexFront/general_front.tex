@@ -67,7 +67,6 @@
 		%    Input Card Details
 		% ---			
 			
-		% - 1:1 line cards: 17
 		% - 2:1 line cards: 20
 		% - 2:2 line cards: 16, 18
 		% - 3:2 line cards: 14, 15
@@ -198,8 +197,18 @@
 								\input{generate_sender_4line.tex}
 							}
 							{	
-								NO
-								%Cards 14,15,16,18,19,20
+								% - 1:1 line cards: 17
+								\ifthenelse{\card=17}
+								{
+									% card 2
+									\input{card_17_constants.tex}	
+									% generate 3 line recipient cards
+									\input{generate_1sLine_1rLine.tex}
+								}
+								{
+									NO
+									%Cards 14,15,16,18,19,20
+								}
 							}
 						}
 					}
