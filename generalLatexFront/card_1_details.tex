@@ -1,11 +1,9 @@
-% card 1 constants
-\input{card_1_constants.tex}	
 % generate card 1 for each set
 \foreach \set in {\setNumberStart,...,\setNumberEnd}
 {	\begin{center}
 		\begin{figure}
 			\resizebox{\paperwidth}{\paperheight}
-			{ \input{card_1_layout.tex}}
+			{\input{card_1_layout.tex}}
 		\end{figure}
 	\end{center}
 }
