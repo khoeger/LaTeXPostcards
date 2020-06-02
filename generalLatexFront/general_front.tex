@@ -67,7 +67,7 @@
 		%    Input Card Details
 		% ---			
 		
-		% - 3 line recipient:10, 13
+		
 		% - 4 line cards: 2
 		
 		% - 1:1 line cards: 17
@@ -154,9 +154,44 @@
 					}
 				}
 				{ 	
-					% - 3 line sender: 1, 3, 
-					NO
-					%Cards 1,2,3,10,13,14,15,16,17,18,19,20
+					% - 3 line sender: 1, 3 
+					\ifthenelse{\card=1 \OR \card=3}
+					{	
+						\ifthenelse{\card=1}
+						{	% card 1
+							\input{card_1_constants.tex}	
+							% generate card 1
+							\input{card_1_details.tex}
+						}
+						{
+							% card 3
+							\input{card_3_constants.tex}	
+							% generate card 1
+							\input{card_1_details.tex}
+						}
+						
+					}
+					{   
+						% - 3 line recipient:10, 13
+						\ifthenelse{\card=10 \OR \card=13}
+						{	
+							% card = 10
+							\ifthenelse{\card = 10}
+							{
+								% card 10
+								\input{card_10_constants.tex}	
+								% generate 3 line recipient cards
+								\input{generate_recipient_3line.tex}
+							}
+							{
+							NO: card = \card NOT 10
+							}			
+						}
+						{	
+							NO
+							%Cards 2,14,15,16,17,18,19,20
+						}
+					}
 				}
 			}
 		}
