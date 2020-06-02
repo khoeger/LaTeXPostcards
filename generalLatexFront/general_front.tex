@@ -1,11 +1,11 @@
 %\documentclass[letterpaper,12pt]{article}
-\documentclass[12pt]{book}
+\documentclass[10pt]{book}
 
 % page dimensions
 \newcommand{\cardHeight}{4.25}
 \newcommand{\cardWidth}{5.5}
-\newcommand{\halfHeight}{2.125}
-\newcommand{\halfWidth}{2.75}
+\newcommand{\halfHeight}{2.125} %1.9 for box!
+\newcommand{\halfWidth}{2.75}  %2.8
 
 % --- Packages
 \usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
@@ -13,7 +13,7 @@
 \usepackage{tikz} 			%draw
 
 \usepackage{fontspec}		%Set font
-\setmainfont{Orbit}         % special by Evan Pittson Design
+\setmainfont{Orbit}           % special by Evan Pittson Design
 
 \usepackage{ifthen}			% if then else
 
@@ -27,14 +27,14 @@
 % --- Defined Values
 % Constants
 \newcommand{\altMargin}{1}
-\newcommand{\lrMarginStart}{2.7}
-\newcommand{\udMarginStart}{2.2}
-\newcommand{\senderNAnchor}{1.7}
-\newcommand{\recipientSAnchor}{-1.5}
+\newcommand{\lrMarginStart}{2.6}
+\newcommand{\udMarginStart}{2}
+\newcommand{\senderNAnchor}{1.4}
+\newcommand{\recipientSAnchor}{-1.25}
 \newcommand{\sendInstructionsX}{-2}
-\newcommand{\sendInstructionsY}{1.5}
+\newcommand{\sendInstructionsY}{1.35}
 \newcommand{\recipInstructionsX}{2}
-\newcommand{\recipInstructionsY}{-1.25}
+\newcommand{\recipInstructionsY}{-1.175}
 \newcommand{\sender}{Sender}
 \newcommand{\recipient}{Recipient}
 
@@ -66,10 +66,7 @@
 		% ---
 		%    Input Card Details
 		% ---			
-		
-		
-		% - 4 line cards: 2
-		
+			
 		% - 1:1 line cards: 17
 		% - 2:2 line cards: 16
 		% - 3:2 line cards: 14, 15
@@ -191,8 +188,18 @@
 							}			
 						}
 						{	
-							NO
-							%Cards 2,14,15,16,17,18,19,20
+							% - 4 line cards: 2
+							\ifthenelse{\card=2}
+							{
+								% card 2
+								\input{card_2_constants.tex}	
+								% generate 3 line recipient cards
+								\input{generate_sender_4line.tex}
+							}
+							{	
+								NO
+								%Cards 14,15,16,17,18,19,20
+							}
 						}
 					}
 				}
