@@ -66,8 +66,7 @@
 		% ---
 		%    Input Card Details
 		% ---			
-			
-		% - 3:2 line cards: 14, 15
+		
 		% - 3 way: 19
 		
 		
@@ -231,8 +230,27 @@
 											}
 										}
 										{	
-											NO
-											%Cards 14,15,19	
+											% - 3:2 line cards: 14, 15
+											\ifthenelse{\card=14 \OR \card=15}
+											{
+												\ifthenelse{\card=14}
+												{
+													% card 14
+													\input{card_14_constants.tex}	
+													% generate 3:2
+													\input{generate_3sLine_2rLine.tex}
+												}
+												{
+													% card 15
+													\input{card_15_constants.tex}	
+													% generate 3:2
+													\input{generate_3sLine_2rLine.tex}
+												}
+											}
+											{
+												NO
+												%Cards 19	
+											}
 										}
 									}
 								}

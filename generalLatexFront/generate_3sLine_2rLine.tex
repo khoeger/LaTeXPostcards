@@ -1,0 +1,9 @@
+% generate card 1 for each set
+\foreach \set in {\setNumberStart,...,\setNumberEnd}
+{	\begin{center}
+	\begin{figure}
+		\resizebox{\paperwidth}{\paperheight}
+		{\input{3s_2r_layout.tex}}
+	\end{figure}
+\end{center}
+}
