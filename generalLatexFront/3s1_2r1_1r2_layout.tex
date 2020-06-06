@@ -13,27 +13,23 @@ S_{\set} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\}
     	% QRK Number
     	\node[anchor=south west] at (-\lrMarginStart, -\udMarginStart) { \tiny \qrkNumber};
 
-    	% sender label
-    	\ifthenelse{\senderOn = 1}
-    					 % for the sender
-    					 {\node[anchor=north east, rotate = 90, text = black!50!white] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};}
-    					 % not for sender
-    					 {\node[anchor=north east, rotate = 90, text = black!20!white] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};}
+    	% Sender 1
+    	\node[anchor=north west, text = black!50!white] at (\sendInsX -  0.2,\sendInsY+0.2) {\altPersonSty{\sender}};
+		% Recipient 1
+    	\node[anchor=south east, text = black!50!white ] at (\recipOneInsX+0.2, \recipOneInsY+0.4) {\altPersonSty{\recipient}};
+    	% Recipient 2
+    	 \node[anchor=center, text = black!50!white ] at (\recipTwoInsX, \recipTwoInsY+0.15) {\altPersonSty{\recipient\- 2}};
 
-    	% recipient label
-    	\ifthenelse{\recipientOn = 1}
-    					 % for the recipient
-    					 {\node[anchor=north east, rotate = -90, text = black!50!white ] at (\lrMarginStart, \recipientSAnchor) {\personSty{\recipient}};}
-    					 % not for recipient
-    					 {\node[anchor=north east, rotate = -90, text = black!20!white ] at (\lrMarginStart,\recipientSAnchor) {\personSty{\recipient}};}
 
     	% instructions - sender
-    	\node[anchor = north west] at (\sendInstructionsX, \sendInstructionsY) { \instructionFormatting{\instructionsOneS} } ;
-			\node[anchor = north west] at (\sendInstructionsX, \sendInstructionsY-0.4) { \instructionFormatting{\instructionsTwoS} } ;
-						\node[anchor = north west] at (\sendInstructionsX, \sendInstructionsY-0.8) { \instructionFormatting{\instructionsThreeS} } ;
-			% instructions - recipient
-	\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY+0.4) { \instructionFormatting{\instructionsOneR} } ;
-	\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY) { \instructionFormatting{\instructionsTwoR} } ;
+    	\node[anchor = north west] at (\sendInsX, \sendInsY) { \altInstructionFormatting{\instructionsOneS} } ;
+			\node[anchor = north west] at (\sendInsX, \sendInsY-0.2) { \altInstructionFormatting{\instructionsTwoS} } ;
+						\node[anchor = north west] at (\sendInsX, \sendInsY-0.4) { \altInstructionFormatting{\instructionsThreeS} } ;
+			% instructions - recipient 1
+	\node[anchor = south east] at (\recipOneInsX, \recipOneInsY+0.2) { \altInstructionFormatting{\tiny \instructionsOneROne} } ;
+	\node[anchor = south east] at (\recipOneInsX, \recipOneInsY) {\altInstructionFormatting{\instructionsTwoROne} } ;
+	% instructions - recipient 2
+	\node[anchor = center] at (\recipTwoInsX, \recipTwoInsY) {\altInstructionFormatting{\instructionsOneRTwo} } ;
 
 
 \end{tikzpicture}

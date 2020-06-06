@@ -35,6 +35,14 @@
 \newcommand{\sendInstructionsY}{1.35}
 \newcommand{\recipInstructionsX}{2.25}
 \newcommand{\recipInstructionsY}{-1.175}
+% Card 19
+\newcommand{\sendInsX}{-\lrMarginStart+0.2}
+\newcommand{\sendInsY}{1.35}
+\newcommand{\recipOneInsX}{\lrMarginStart-0.2}
+\newcommand{\recipOneInsY}{-0.25}
+\newcommand{\recipTwoInsX}{-.5}
+\newcommand{\recipTwoInsY}{-0.75}
+
 \newcommand{\sender}{Sender}
 \newcommand{\recipient}{Recipient}
 
@@ -53,8 +61,10 @@
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
 \newcommand{ \personSty }[1]{\raggedright \normalsize \MakeUppercase #1}
+\newcommand{ \altPersonSty }[1]{\raggedright \tiny \MakeUppercase #1}
 % Instructions
 \newcommand{\instructionFormatting}[1]{\small \MakeLowercase #1}
+\newcommand{\altInstructionFormatting}[1]{\tiny \MakeLowercase #1}
 
 
 \begin{document}
@@ -251,7 +261,7 @@
 												% card 19
 												\input{card_19_constants.tex}	
 												% generate 3:2:1
-												\input{generate_3s1Line_2r1Line_1r2.tex}
+												\input{generate_3s1Line_2r1Line_1r2Line.tex}
 											}
 										}
 									}
