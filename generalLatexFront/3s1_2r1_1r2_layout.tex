@@ -15,21 +15,39 @@ S_{\set} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\}
 
     	% Sender 1
     	\node[anchor=north west, text = black!50!white] at (\sendInsX -  0.2,\sendInsY+0.2) {\altPersonSty{\sender}};
+    	\draw (\sendInsX+0.75,\sendInsY-0.075) -- (\sendInsX+3,\sendInsY-0.075);
 		% Recipient 1
-    	\node[anchor=south east, text = black!50!white ] at (\recipOneInsX+0.2, \recipOneInsY+0.4) {\altPersonSty{\recipient}};
+    	\node[anchor=south east, text = black!50!white ] at (\recipOneInsX+0.2, \recipOneInsY+0.45) {\altPersonSty{\recipient}};
+    	\draw (\recipOneInsX-1,\recipOneInsY+0.55) -- (\recipOneInsX-3.25,\recipOneInsY+0.55);
     	% Recipient 2
     	 \node[anchor=center, text = black!50!white ] at (\recipTwoInsX, \recipTwoInsY+0.15) {\altPersonSty{\recipient\- 2}};
+		\draw (\recipTwoInsX+1.125,\recipTwoInsY-0.2) -- (\recipTwoInsX-1.125,\recipTwoInsY-0.2);
+
 
 
     	% instructions - sender
     	\node[anchor = north west] at (\sendInsX, \sendInsY) { \altInstructionFormatting{\instructionsOneS} } ;
-			\node[anchor = north west] at (\sendInsX, \sendInsY-0.2) { \altInstructionFormatting{\instructionsTwoS} } ;
+			\node[anchor = north west](sendA) at (\sendInsX, \sendInsY-0.2) { \altInstructionFormatting{\instructionsTwoS} } ;
 						\node[anchor = north west] at (\sendInsX, \sendInsY-0.4) { \altInstructionFormatting{\instructionsThreeS} } ;
 			% instructions - recipient 1
-	\node[anchor = south east] at (\recipOneInsX, \recipOneInsY+0.2) { \altInstructionFormatting{\tiny \instructionsOneROne} } ;
-	\node[anchor = south east] at (\recipOneInsX, \recipOneInsY) {\altInstructionFormatting{\instructionsTwoROne} } ;
+	\node[anchor = south east](recipA) at (\recipOneInsX, \recipOneInsY+0.2) { \altInstructionFormatting{\tiny \instructionsOneROne} } ;
+	\node[anchor = south east](sendB) at (\recipOneInsX, \recipOneInsY) {\altInstructionFormatting{\instructionsTwoROne} } ;
 	% instructions - recipient 2
-	\node[anchor = center] at (\recipTwoInsX, \recipTwoInsY) {\altInstructionFormatting{\instructionsOneRTwo} } ;
+	\node[anchor = center](recipB) at (\recipTwoInsX, \recipTwoInsY-0.3) % \recipTwoInsY-0.05)
+	 {\altInstructionFormatting{\instructionsOneRTwo} } ;
+	 
+	 % arrows
+	 \draw[	->] 
+	 			(\sendInsX+3.25, \sendInsY+0.05) 
+	 			to [out=0,in=90] 
+	 			node [sloped, above] {\tiny mail to}
+	 			(\recipOneInsX -0.5 , \recipOneInsY+0.875);
+	 
+	  \draw[ ->] 
+	 			(\recipOneInsX-3.25,  \recipOneInsY+0.75) 
+	 			to [out=-180,in=180] 
+	 			node [sloped, below] {\tiny mail to}
+	 			(\recipTwoInsX -1, \recipTwoInsY+0.1);
 
 
 \end{tikzpicture}
