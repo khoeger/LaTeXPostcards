@@ -1,0 +1,18 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[landscape]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- Postcard Fronts
+% 1 set
+\includepdf[	pages={2-20,22},
+					nup=2x2,
+					frame=true,
+					noautoscale
+					]{generalLatexFront/general_front.pdf}
+
+\end{document}
