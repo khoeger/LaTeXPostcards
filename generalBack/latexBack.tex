@@ -1,0 +1,35 @@
+%\documentclass[letterpaper,12pt]{article}
+\documentclass[10pt]{book}
+
+% page dimensions
+\newcommand{\cardHeight}{4.25}
+\newcommand{\cardWidth}{5.5}
+\newcommand{\halfHeight}{2.125} %1.9 for box!
+\newcommand{\halfWidth}{2.75}  %2.8
+
+% --- Packages
+\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+
+\usepackage{tikz} 			%draw
+
+\usepackage{fontspec}		%Set font
+\setmainfont{Orbit}           % special by Evan Pittson Design
+
+\usepackage{ifthen}			% if then else
+
+\usepackage{mathtools}
+
+% --- Formatting
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+	\begin{center}
+		\begin{figure}
+			\resizebox{\paperwidth}{\paperheight}
+			{\input{standard_back_layout.tex}}
+		\end{figure}
+	\end{center}
+
+\end{document}
