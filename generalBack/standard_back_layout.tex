@@ -16,6 +16,14 @@
 \draw[line width = 0.005cm] 	(\lineLeft,\topLineY-2*\lineSpacing) to (\lineLeft+\lineLength,\topLineY-2*\lineSpacing);
 
 % stamp corner
-
+\foreach \num in {8.25,8.5,...,9.75}
+    \node [] at (\num, 5) {\includegraphics[scale=0.05]{logo.png}};
+\foreach \num in {8,8.25,...,9.75}
+	\node [] at (\num, 3.5) {\includegraphics[scale=0.05]{logo.png}};
+	
+\foreach \num in {3.75,4,...,5}
+	\node [] at (8,\num) {\includegraphics[scale=0.05]{logo.png}};
+\foreach \num in {3.5,3.75,...,4.75}
+	\node [] at (10,\num) {\includegraphics[scale=0.05]{logo.png}};
 
 \end{tikzpicture}
