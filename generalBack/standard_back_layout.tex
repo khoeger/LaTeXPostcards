@@ -11,8 +11,11 @@
 \node [] at (10,5) {\includegraphics[scale=0.05]{logo.png}};
 
 % lines
-\draw[red,line width = 0.005cm] (2,3) to (5,3);
-\draw[green,line width = 0.005cm] (2,2) to (5,2);
-\draw[blue,line width = 0.005cm] (2,1) to (5,1);
+\draw[red,line width = 0.005cm]     (\lineLeft,\topLineY) to (\lineLeft+\lineLength,\topLineY);
+\draw[green,line width = 0.005cm] (\lineLeft,\topLineY-\lineSpacing) to (\lineLeft+\lineLength,\topLineY-\lineSpacing);
+\draw[blue,line width = 0.005cm] 	(\lineLeft,\topLineY-2*\lineSpacing) to (\lineLeft+\lineLength,\topLineY-2*\lineSpacing);
+
+% stamp corner
+
 
 \end{tikzpicture}
