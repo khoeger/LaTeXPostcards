@@ -28,14 +28,23 @@
 % --- Variables
 \newcommand{\topLineY}{2.75}
 \newcommand{\lineLeft}{6.25}
+\newcommand{\nextIncrement}{\lineLeft+0.25}
 \newcommand{\lineLength}{3.5}
+\newcommand{\lineEnd}{\lineLeft+\lineLength}
 \newcommand{\lineSpacing}{0.65}
 
 \begin{document}
-	\begin{center}
-		\begin{figure}
-			\resizebox{\paperwidth}{\paperheight}
-			{\input{standard_back_layout.tex}}
-		\end{figure}
-	\end{center}
+	\foreach \card in {1,2,...,20}
+	{
+		\ifthenelse{\card=19}
+		{OTHER:\card}
+		{  % cards not card 19
+			\begin{center}
+				\begin{figure}
+					\resizebox{\paperwidth}{\paperheight}
+					{\input{standard_back_layout.tex}}
+				\end{figure}
+			\end{center}
+		}
+	}
 \end{document}

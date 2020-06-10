@@ -11,19 +11,29 @@
 \node [] at (10,5) {\includegraphics[scale=0.05]{logo.png}};
 
 % lines
-\draw[line width = 0.005cm]     (\lineLeft,\topLineY) to (\lineLeft+\lineLength,\topLineY);
-\draw[line width = 0.005cm] (\lineLeft,\topLineY-\lineSpacing) to (\lineLeft+\lineLength,\topLineY-\lineSpacing);
-\draw[line width = 0.005cm] 	(\lineLeft,\topLineY-2*\lineSpacing) to (\lineLeft+\lineLength,\topLineY-2*\lineSpacing);
+\draw[line width = 0.005cm,fill=black!30!white]     (\lineLeft,\topLineY) to (\lineLeft+\lineLength,\topLineY);
+\draw[line width = 0.005cm,fill=black!30!white] (\lineLeft,\topLineY-\lineSpacing) to (\lineLeft+\lineLength,\topLineY-\lineSpacing);
+\draw[line width = 0.005cm,fill=black!30!white] 	(\lineLeft,\topLineY-2*\lineSpacing) to (\lineLeft+\lineLength,\topLineY-2*\lineSpacing);
+
+%\foreach \num in {\lineLeft,\lineLeft+\lineLength}
+% 	\node [anchor=center] at (\num, \topLineY) {\includegraphics[scale=0.05]{logo.png}};
+%\foreach \num in {\lineLeft,\lineLeft+\lineLength}
+% 	\node [anchor=center] at (\num, \topLineY-\lineSpacing) {\includegraphics[scale=0.05]{logo.png}};
+%\foreach \num in {\lineLeft,\lineLeft+\lineLength}
+% 	\node [anchor=center] at (\num, \topLineY-2*\lineSpacing) {\includegraphics[scale=0.05]{logo.png}};
 
 % stamp corner
-\foreach \num in {8.25,8.5,...,9.75}
-    \node [] at (\num, 5) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {8,8.25,...,9.75}
-	\node [] at (\num, 3.5) {\includegraphics[scale=0.05]{logo.png}};
+\foreach \num in {8.666,9.333}
+    \node [anchor=center] at (\num, 5) {\includegraphics[scale=0.05]{logo.png}};
+\foreach \num in {8,8.666,9.333}
+	\node [anchor=center] at (\num, 3.5) {\includegraphics[scale=0.05]{logo.png}};
 	
-\foreach \num in {3.75,4,...,5}
-	\node [] at (8,\num) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {3.5,3.75,...,4.75}
-	\node [] at (10,\num) {\includegraphics[scale=0.05]{logo.png}};
+\foreach \num in {3.8,4.1,4.4,4.7,5}
+	\node [anchor=center] at (8,\num) {\includegraphics[scale=0.05]{logo.png}};
+\foreach \num in {3.5,3.8,4.1,4.4,4.7}
+	\node [anchor=center] at (10,\num) {\includegraphics[scale=0.05]{logo.png}};
+
+% center
+\node [anchor=center] at (9, 4.25) {\includegraphics[scale=0.05]{logo.png}};
 
 \end{tikzpicture}
