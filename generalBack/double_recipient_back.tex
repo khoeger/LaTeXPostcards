@@ -1,43 +1,46 @@
 \begin{tikzpicture}[]	
 
-% dividing line
+% diagonal dividing line bottom
 \draw[line width = 0.005cm,fill=black!30!white]
-		(8,3.5) to (2,1.5);
-
+		(4.75,2.416) to (2.25,1.583);
+% diagonal dividing line top
+\draw[line width = 0.005cm,fill=black!30!white]
+		(5.25,2.583) to (7.75,3.416);
+		
 % corner points
 \node [] at (0,0) {\includegraphics[scale=0.05]{logo.png}};
 \node [] at (0,5) {\includegraphics[scale=0.05]{logo.png}};
 \node [] at (10,0) {\includegraphics[scale=0.05]{logo.png}};
 \node [] at (10,5) {\includegraphics[scale=0.05]{logo.png}};
 
-% lines
-\draw[line width = 0.005cm,fill=black!30!white]     (\lineLeft,\topLineY) to (\lineLeft+\lineLength,\topLineY);
-\draw[line width = 0.005cm,fill=black!30!white] (\lineLeft,\topLineY-\lineSpacing) to (\lineLeft+\lineLength,\topLineY-\lineSpacing);
-\draw[line width = 0.005cm,fill=black!30!white] 	(\lineLeft,\topLineY-2*\lineSpacing) to (\lineLeft+\lineLength,\topLineY-2*\lineSpacing);
+%% lines
+%\draw[line width = 0.005cm,fill=black!30!white]     (\lineLeft,\topLineY) to (\lineLeft+\lineLength,\topLineY);
+%\draw[line width = 0.005cm,fill=black!30!white] (\lineLeft,\topLineY-\lineSpacing) to (\lineLeft+\lineLength,\topLineY-\lineSpacing);
+%\draw[line width = 0.005cm,fill=black!30!white] 	(\lineLeft,\topLineY-2*\lineSpacing) to (\lineLeft+\lineLength,\topLineY-2*\lineSpacing);
 
 % stamp corner UR
-\foreach \num in {8.666,9.333}
+\foreach \num in {9}
     \node [anchor=center] at (\num, 5) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {8,8.666,9.333}
+\foreach \num in {8,9}
 	\node [anchor=center] at (\num, 3.5) {\includegraphics[scale=0.05]{logo.png}};
 	
-\foreach \num in {3.8,4.1,4.4,4.7,5}
+\foreach \num in {4.25,5}
 	\node [anchor=center] at (8,\num) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {3.5,3.8,4.1,4.4,4.7}
+\foreach \num in {3.5,4.25}
 	\node [anchor=center] at (10,\num) {\includegraphics[scale=0.05]{logo.png}};
 	
 % center UR
 \node [anchor=center] at (9, 4.25) {\includegraphics[scale=0.05]{logo.png}};
 
 % stamp corner BL
-\foreach \num in {8.666,9.333}
-    \node [anchor=center] at (\num, 5) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {8,8.666,9.333}
-	\node [anchor=center] at (\num, 3.5) {\includegraphics[scale=0.05]{logo.png}};
+\foreach \num in {1}
+    \node [anchor=center] at (\num, 0) {\includegraphics[scale=0.05]{logo.png}};
+\foreach \num in {1,2}
+	\node [anchor=center] at (\num, 1.5) {\includegraphics[scale=0.05]{logo.png}};
 	
-\foreach \num in {0.3,0.6,0.9,1.2,1.5}
+\foreach \num in {0.75,1.5}
 	\node [anchor=center] at (0,\num) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {0,0.3,0.6,0.9,1.2}
+\foreach \num in {0,0.75}
 	\node [anchor=center] at (2,\num) {\includegraphics[scale=0.05]{logo.png}};
 
 % center BL
