@@ -1,17 +1,48 @@
 \begin{tikzpicture}[]	
 
-% diagonal dividing line bottom
+% --  left adress lines
+% bottom
 \draw[line width = 0.005cm,fill=black!30!white]
-		(4.75,2.416) to (2.25,1.583);
-% diagonal dividing line top
+		(2.25,1.750) to (4.75,2.583);
+% middle
 \draw[line width = 0.005cm,fill=black!30!white]
-		(5.25,2.583) to (7.75,3.416);
+		(2.25,2.250) to (4.75,3.083);
+% top
+\draw[line width = 0.005cm,fill=black!30!white]
+		(2.25,2.750) to (4.75,3.583);
 		
-% corner points
-\node [] at (0,0) {\includegraphics[scale=0.05]{logo.png}};
-\node [] at (0,5) {\includegraphics[scale=0.05]{logo.png}};
-\node [] at (10,0) {\includegraphics[scale=0.05]{logo.png}};
-\node [] at (10,5) {\includegraphics[scale=0.05]{logo.png}};
+% --  right adress lines
+% bottom
+\draw[line width = 0.005cm,fill=black!30!white]
+		(5.25,1.250) to (7.75,2.083);
+% middle
+\draw[line width = 0.005cm,fill=black!30!white]
+		(5.25,1.750) to (7.75,2.583);
+% top
+\draw[line width = 0.005cm,fill=black!30!white]
+		(5.25,2.250) to (7.75,3.083);
+		
+		
+%% --- wavy diagonal
+\node [] at (3.6666,0.129274056) {\includegraphics[scale=0.05]{logo.png}};
+%	
+\node [] at (3.9999,1.49969997) {\includegraphics[scale=0.05]{logo.png}};
+%	
+\node [] at (4.3332,2.20352589) {\includegraphics[scale=0.05]{logo.png}};
+%	
+\node [] at (4.6665,2.46290738) {\includegraphics[scale=0.05]{logo.png}};
+%	
+\node [] at (4.9998,2.5) {\includegraphics[scale=0.05]{logo.png}};
+%	
+\node [] at (5.3331,2.536959314) {\includegraphics[scale=0.05]{logo.png}};
+%	
+\node [] at (5.6664,2.795940883) {\includegraphics[scale=0.05]{logo.png}};
+%	
+\node [] at (5.9997,3.49910027) {\includegraphics[scale=0.05]{logo.png}};
+%	
+\node [] at (6.333,4.868593037) {\includegraphics[scale=0.05]{logo.png}};
+
+
 
 %% lines
 %\draw[line width = 0.005cm,fill=black!30!white]     (\lineLeft,\topLineY) to (\lineLeft+\lineLength,\topLineY);
@@ -19,31 +50,39 @@
 %\draw[line width = 0.005cm,fill=black!30!white] 	(\lineLeft,\topLineY-2*\lineSpacing) to (\lineLeft+\lineLength,\topLineY-2*\lineSpacing);
 
 % stamp corner UR
-\foreach \num in {9}
-    \node [anchor=center] at (\num, 5) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {8,9}
-	\node [anchor=center] at (\num, 3.5) {\includegraphics[scale=0.05]{logo.png}};
-	
-\foreach \num in {4.25,5}
-	\node [anchor=center] at (8,\num) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {3.5,4.25}
-	\node [anchor=center] at (10,\num) {\includegraphics[scale=0.05]{logo.png}};
-	
+\fill [black!5!white] (8,3.5) rectangle (10,5);
+%\foreach \num in {9}
+%    \node [anchor=center] at (\num, 5) {\includegraphics[scale=0.05]{logo.png}};
+%\foreach \num in {8,9}
+%	\node [anchor=center] at (\num, 3.5) {\includegraphics[scale=0.05]{logo.png}};
+%	
+%\foreach \num in {4.25,5}
+%	\node [anchor=center] at (8,\num) {\includegraphics[scale=0.05]{logo.png}};
+%\foreach \num in {3.5,4.25}
+%	\node [anchor=center] at (10,\num) {\includegraphics[scale=0.05]{logo.png}};
+%	
 % center UR
-\node [anchor=center] at (9, 4.25) {\includegraphics[scale=0.05]{logo.png}};
+%\node [anchor=center] at (9, 4.25) {\includegraphics[scale=0.05]{logo.png}};
 
 % stamp corner BL
-\foreach \num in {1}
-    \node [anchor=center] at (\num, 0) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {1,2}
-	\node [anchor=center] at (\num, 1.5) {\includegraphics[scale=0.05]{logo.png}};
-	
-\foreach \num in {0.75,1.5}
-	\node [anchor=center] at (0,\num) {\includegraphics[scale=0.05]{logo.png}};
-\foreach \num in {0,0.75}
-	\node [anchor=center] at (2,\num) {\includegraphics[scale=0.05]{logo.png}};
+\fill [black!5!white] (0,0) rectangle (2,1.5);
+%\foreach \num in {1}
+%    \node [anchor=center] at (\num, 0) {\includegraphics[scale=0.05]{logo.png}};
+%\foreach \num in {1,2}
+%	\node [anchor=center] at (\num, 1.5) {\includegraphics[scale=0.05]{logo.png}};
+%	
+%\foreach \num in {0.75,1.5}
+%	\node [anchor=center] at (0,\num) {\includegraphics[scale=0.05]{logo.png}};
+%\foreach \num in {0,0.75}
+%	\node [anchor=center] at (2,\num) {\includegraphics[scale=0.05]{logo.png}};
 
 % center BL
-\node [anchor=center] at (1, 0.75) {\includegraphics[scale=0.05]{logo.png}};
+%\node [anchor=center] at (1, 0.75) {\includegraphics[scale=0.05]{logo.png}};
+
+%%% corner points
+\node [] at (0,0) {\includegraphics[scale=0.05]{logo.png}};
+\node [] at (0,5) {\includegraphics[scale=0.05]{logo.png}};
+\node [] at (10,0) {\includegraphics[scale=0.05]{logo.png}};
+\node [] at (10,5) {\includegraphics[scale=0.05]{logo.png}};
 
 \end{tikzpicture}
