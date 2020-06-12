@@ -8,6 +8,7 @@ Specifically, [Karol Koziol](https://www.overleaf.com/latex/templates/business-c
 - [Front Back Business Card](https://olivierpieters.be/blog/2017/02/11/designing-a-business-card-in-latex) by Olivier Pieters
 - [Memoir Class TeX Docs](http://texdoc.net/texmf-dist/doc/latex/memoir/memman.pdf)
 - [TikZ \& PGF Manual](http://ctan.math.utah.edu/ctan/tex-archive/graphics/pgf/base/doc/pgfmanual.pdf)
+- [PDF Pages](http://mirror.utexas.edu/ctan/macros/latex/contrib/pdfpages/pdfpages.pdf)
 
 ### NEXT ATTEMPT
 [Overlay Text On Photos](https://tex.stackexchange.com/questions/20792/how-to-superimpose-latex-on-a-picture) - make a grid of 4
