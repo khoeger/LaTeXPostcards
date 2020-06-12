@@ -1,0 +1,18 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[landscape]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- Bellybands
+\includepdf[	pages={1-21},
+					%duplicatepages=21,
+					nup=1x5,
+					frame=true,
+					noautoscale
+					]{belly_band_generator.pdf}
+
+\end{document}

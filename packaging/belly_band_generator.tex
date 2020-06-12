@@ -1,0 +1,43 @@
+\documentclass[10pt]{book}
+
+% --- Packages
+\usepackage[paperwidth= 11 in, paperheight= 1.5 in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+
+\usepackage{fontspec}		%Set font
+\setmainfont{Orbit}           % special by Evan Pittson Design
+
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+
+%\usepackage{ifthen}			% if then else
+\usepackage{pgffor}
+
+\usepackage{mathtools}
+
+% --- Macros
+
+\newcommand{\seriesTitle}{\Huge{P}\huge{OSTAL} \Huge{S}\huge{CORES}}
+
+\newcommand{\setNumberStart}{0}
+\newcommand{\setNumberEnd}{20}
+% QRK
+\newcommand{\runDate}{20200612}
+\newcommand{\multipleNum}{7}
+\newcommand{\projectNum}{9}
+\newcommand{\iterationNumber}{1}
+
+\begin{document}
+\foreach \cardSet in  {\setNumberStart,...,\setNumberEnd}
+{
+		\newcommand{\qrkNumber}{\large QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
+			S_{\cardSet} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} $}
+		\vspace*{0.01in}
+		\begin{center}
+			\seriesTitle\\
+			\qrkNumber\\
+			\medskip
+			\includegraphics[scale=0.2]{logo.png}
+		\end{center}
+		\newpage
+}
+\end{document}
