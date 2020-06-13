@@ -1,0 +1,54 @@
+\documentclass[letterpaper]{article}
+
+\usepackage{fontspec}		%Set font
+\setmainfont{Orbit}          % special by Evan Pittson Design
+
+\usepackage[final]{pdfpages}
+
+%\pagenumbering{gobble}
+
+\begin{document}
+% --- Sticker Backs Ordered
+% 0 - all fronts generator
+\includepdf[pages={1-},nup=3x2,column=true,offset=20 0]{layoutPDFS/all_front_generator.pdf}
+% 1 - 3:0
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/4s_0r.pdf}
+% 2 - 4:0
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/3s_0r.pdf}
+% 3 - 3:0
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/3s_0r.pdf}
+% 4 - 2:0
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/2s_0r.pdf}
+% 5 - 2:0
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/2s_0r.pdf}
+% 6 - 2:0
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/2s_0r.pdf}
+% 7 - 1:0
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/1s_0r.pdf}
+% 8 - 0:1
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/0s_1r.pdf}
+% 9 - 0:1
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/0s_1r.pdf}
+% 10 - 0:3
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/0s_3r.pdf}
+% 11 - 0:2
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/0s_2r.pdf}
+% 12 - 0:2
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/0s_2r.pdf}
+% 13 - 0:3
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/0s_3r.pdf}
+%14 - 3:2
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/3s_2r.pdf}
+%15 - 3:2
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/3s_2r.pdf}
+%16 - 2:2
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/2s_2r.pdf}
+% 17 - 1:1
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/1s_1r.pdf}
+%18 - 2:2
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/2s_2r.pdf}
+%19 - 3:2:1
+\includepdf[pagecommand={\thispagestyle{plain}},scale=0.75,offset=20 0]{layoutPDFS/3s1_2r1_1r2.pdf}
+% 20 - 2:1
+\includepdf[pagecommand={\thispagestyle{plain}},offset=20 0]{layoutPDFS/2s_1r.pdf}
+\end{document}

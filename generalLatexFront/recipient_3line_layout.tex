@@ -1,36 +1,45 @@
 %Generate QRK Number
-\newcommand{\qrkNumber}{QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:\begin{matrix*}[l]
-\card \in \{ \cardNumberStart, \dots , \cardNumberEnd\} = S_{\set}\\
-S_{\set} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\}
-\end{matrix*}$}
+\newcommand{\qrkNumber}{QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
+  \begin{matrix*}[l]
+    \card \in \{ \cardNumberStart, \dots , \cardNumberEnd\} = S_{\set}\\
+    S_{\set} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\}
+  \end{matrix*}$}
 \begin{tikzpicture}[]
-		% card
-    	%\draw[line width = 0.05cm] (-\halfWidth,-\halfHeight) rectangle (\halfWidth,\halfHeight);
 
     	% title
-    	\node[anchor=north west] at (-\lrMarginStart,\udMarginStart) { \cardTitleSty{\cardTitle}};
+    	\node[anchor=north west] at (-\lrMarginStart,\udMarginStart)
+        { \cardTitleSty{\cardTitle}};
 
     	% QRK Number
-    	\node[anchor=south west] at (-\lrMarginStart, -\udMarginStart) { \tiny \qrkNumber};
+    	\node[anchor=south west] at (-\lrMarginStart, -\udMarginStart)
+        { \tiny \qrkNumber};
 
     	% sender label
     	\ifthenelse{\senderOn = 1}
     					 % for the sender
-    					 {\node[anchor=north east, rotate = 90, text = black!50!white] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};}
+    					 {\node[anchor=north east, rotate = 90, text = black!50!white]
+                at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};}
     					 % not for sender
-    					 {\node[anchor=north east, rotate = 90, text = black!20!white] at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};}
+    					 {\node[anchor=north east, rotate = 90, text = black!20!white]
+                at (-\lrMarginStart,\senderNAnchor) {\personSty{\sender}};}
 
     	% recipient label
     	\ifthenelse{\recipientOn = 1}
     					 % for the recipient
-    					 {\node[anchor=north east, rotate = -90, text = black!50!white ] at (\lrMarginStart, \recipientSAnchor) {\personSty{\recipient}};}
+    					 {\node[anchor=north east, rotate = -90, text = black!50!white ]
+              at (\lrMarginStart, \recipientSAnchor) {\personSty{\recipient}};}
     					 % not for recipient
-    					 {\node[anchor=north east, rotate = -90, text = black!20!white ] at (\lrMarginStart,\recipientSAnchor) {\personSty{\recipient}};}
+    					 {\node[anchor=north east, rotate = -90, text = black!20!white ]
+               at (\lrMarginStart,\recipientSAnchor) {\personSty{\recipient}};}
 
     	% instructions
-    	\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY+1) { \instructionFormatting{\instructionsOne} } ;
-			\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY) { \instructionFormatting{\instructionsThree} } ;
-    	\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY+0.5) { \instructionFormatting{\instructionsTwo} } ;
-			\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY) { \instructionFormatting{\instructionsThree} } ;
+    	\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY+1)
+        { \instructionFormatting{\instructionsOne} } ;
+			\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY)
+        { \instructionFormatting{\instructionsThree} } ;
+    	\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY+0.5)
+        { \instructionFormatting{\instructionsTwo} } ;
+			\node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY)
+        { \instructionFormatting{\instructionsThree} } ;
 
 \end{tikzpicture}

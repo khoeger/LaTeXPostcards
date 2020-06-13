@@ -1,31 +1,26 @@
-%\documentclass[letterpaper,12pt]{article}
 \documentclass[10pt]{book}
 
 % page dimensions
 \newcommand{\cardHeight}{4.25}
 \newcommand{\cardWidth}{5.5}
-\newcommand{\halfHeight}{2.125} %1.9 for box!
-\newcommand{\halfWidth}{2.75}  %2.8
+\newcommand{\halfHeight}{2.125}
+\newcommand{\halfWidth}{2.75}
 
 % --- Packages
-\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
-
-\usepackage{tikz} 			%draw
-
-\usepackage{fontspec}		%Set font
-\setmainfont{Orbit}           % special by Evan Pittson Design
-
+\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,
+						top=0 in, bottom=0 in, left=0 in, right=0 in]{geometry}
+\usepackage{tikz} 			% drawing functions & foreach
+\usepackage{fontspec}		% Set font
+\setmainfont{Orbit}     % special by Evan Pittson Design
 \usepackage{ifthen}			% if then else
-
-\usepackage{mathtools}
+\usepackage{mathtools}  % mathematical symbols
 
 % --- Formatting
 \pagenumbering{gobble}
 \setlength{\parindent}{0pt}
 
-
-% --- Defined Values
-% Constants
+% --- Macros
+% Numerical Constants
 \newcommand{\altMargin}{1}
 \newcommand{\lrMarginStart}{2.6}
 \newcommand{\udMarginStart}{2}
@@ -35,29 +30,26 @@
 \newcommand{\sendInstructionsY}{1.35}
 \newcommand{\recipInstructionsX}{2.25}
 \newcommand{\recipInstructionsY}{-1.175}
-% Card 19
+% Text Constants
+\newcommand{\sender}{Sender}
+\newcommand{\recipient}{Recipient}
+% Card 2 Recpient Card Special Values (Card 19)
 \newcommand{\sendInsX}{-\lrMarginStart+0.2}
 \newcommand{\sendInsY}{1.35}
 \newcommand{\recipOneInsX}{\lrMarginStart-0.2}
 \newcommand{\recipOneInsY}{-0.25}
 \newcommand{\recipTwoInsX}{-.5}
 \newcommand{\recipTwoInsY}{-0.75}
-
-\newcommand{\sender}{Sender}
-\newcommand{\recipient}{Recipient}
-
-% QRK
+% QRK Number Generation
 \newcommand{\runDate}{20200612}
 \newcommand{\multipleNum}{7}
 \newcommand{\projectNum}{9}
 \newcommand{\iterationNumber}{1}
-
 % Set Specific Variables
 \newcommand{\setNumberStart}{0}
 \newcommand{\setNumberEnd}{20}
 \newcommand{\cardNumberStart}{1}
 \newcommand{\cardNumberEnd}{20}
-
 % Styling
 \newcommand{ \cardTitleSty }[1]{\raggedright \large \MakeUppercase #1}
 \newcommand{ \personSty }[1]{\raggedright \normalsize \MakeUppercase #1}
@@ -65,7 +57,6 @@
 % Instructions
 \newcommand{\instructionFormatting}[1]{\small \MakeLowercase #1}
 \newcommand{\altInstructionFormatting}[1]{\tiny \MakeLowercase #1}
-
 
 \begin{document}
 	\foreach \card in {\cardNumberStart,...,\cardNumberEnd}
@@ -76,14 +67,9 @@
 		% ---
 		%    Input Card Details
 		% ---
-
-		% - 3 way: 19
-
-
 		% - 1 line cards: 7, 8, 9
 		\ifthenelse{ \card = 7 \OR \card = 8 \OR \card = 9
 		}{ % Set individual card details
-
 			% card 7  - sender 1 liner
 			\ifthenelse{\card = 7}
 			{
