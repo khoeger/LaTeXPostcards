@@ -1,7 +1,16 @@
 \documentclass[10pt]{book}
 
 % --- Packages
-\usepackage[paperwidth= 4.25 in, paperheight= 5.5 in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+\usepackage[paperwidth= 4.25 in, paperheight= 5.5 in,
+					headsep = 10mm,
+					top=20mm, 
+					%bottom=0in, left=0in, right=0in
+					]{geometry}
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\fancyhf{}
 
 \usepackage{fontspec}		%Set font
 \setmainfont{Orbit}           % special by Evan Pittson Design
@@ -26,18 +35,48 @@
 \newcommand{\projectNum}{9}
 \newcommand{\iterationNumber}{1}
 
+
+\fancyhead[C]{\seriesTitle}
+\fancyfoot[C]{NUMBERS \thepage}
+
+% Decorations
+\renewcommand{\headrulewidth}{15pt}
+\renewcommand{\headwidth}{0.75\paperwidth}
+
+%\makeatletter
+%\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ 1.1em{\hss .\hss }\hfill \kern \z@}
+%\makeatother
+
+\makeatletter
+\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ 2.5em{\hss \includegraphics[scale=0.05]{logo.png}\hss }\hfill \kern \z@}
+\makeatother
+
+\renewcommand{\headrule}{\vbox to 0pt{\hbox to \headwidth{\Dotfill}\vss}}
+
+
+
 \begin{document}
-\foreach \cardSet in  {\setNumberStart,...,\setNumberEnd}
-{
-		\newcommand{\qrkNumber}{\large QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
-			S_{\cardSet} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} $}
-		\vspace*{0.01in}
-		\begin{center}
-			\seriesTitle\\
-			\qrkNumber\\
-			\medskip
-			\includegraphics[scale=0.2]{logo.png}
-		\end{center}
-		\newpage
-}
+\begin{center}
+\Large{ABOUT}\\
+
+\medskip
+
+\normalsize{Each set of the Postal Scores series contains performance scores in the form of postcards. } All interactions with the cards create a performance, enacted by whoever comes across the card. Possible performers include the set owner, each card's sender and/or recipient(s), and any casual observers. Use of the card set promotes contemplating different aspects of a postal relationship. 
+
+If no cards are sent, the empty set performance is triggered
+\end{center}
+
+%\foreach \cardSet in  {\setNumberStart,...,\setNumberEnd}
+%{	\fancyhead{\seriesTitle}
+%		\newcommand{\qrkNumber}{\large QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
+%			S_{\cardSet} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} $}
+%		\vspace*{0.01in}
+%		\begin{center}
+%			%\seriesTitle\\
+%			\qrkNumber\\
+%			\medskip
+%			\includegraphics[scale=0.2]{logo.png}
+%		\end{center}
+%		\newpage
+%}
 \end{document}
