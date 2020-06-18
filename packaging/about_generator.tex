@@ -37,7 +37,7 @@
 
 
 \fancyhead[C]{\seriesTitle}
-\fancyfoot[C]{NUMBERS \thepage}
+
 
 % Decorations
 \renewcommand{\headrulewidth}{15pt}
@@ -48,7 +48,7 @@
 %\makeatother
 
 \makeatletter
-\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ 2.5em{\hss \includegraphics[scale=0.05]{logo.png}\hss }\hfill \kern \z@}
+\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ 2.25em{\hss \includegraphics[scale=0.05]{logo.png}\hss }\hfill \kern \z@}
 \makeatother
 
 \renewcommand{\headrule}{\vbox to 0pt{\hbox to \headwidth{\Dotfill}\vss}}
@@ -56,14 +56,17 @@
 
 
 \begin{document}
+
 \begin{center}
-\Large{ABOUT}\\
+\large{ABOUT}\\
 
 \medskip
 
-\normalsize{Each set of the Postal Scores series contains performance scores in the form of postcards. } All interactions with the cards create a performance, enacted by whoever comes across the card. Possible performers include the set owner, each card's sender and/or recipient(s), and any casual observers. Use of the card set promotes contemplating different aspects of a postal relationship. 
+\small{Enjoy the experience of your personal set of postcards from the Postal Scores series. Each postcard is a performance score. As a set owner, a card's sender, a card's recipient,  or a card's viewer, your actions with an element of this set of postcards become a performance. \\
 
-If no cards are sent, the empty set performance is triggered
+\medskip
+
+Each card sets up a different scenario that a card sender and card recipient can enact. By participating, they get to experience different actions and have the opportunity to reflect on how these actions enhance their postal relationship.\\}
 \end{center}
 
 %\foreach \cardSet in  {\setNumberStart,...,\setNumberEnd}
@@ -79,4 +82,9 @@ If no cards are sent, the empty set performance is triggered
 %		\end{center}
 %		\newpage
 %}
+\fancyfoot[C]{NUMBERS \thepage}
+
+\newpage
+jkjl
+\fancyfoot[C]{NUMBERS \thepage}
 \end{document}
