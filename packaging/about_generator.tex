@@ -4,6 +4,7 @@
 \usepackage[paperwidth= 4.25 in, paperheight= 5.5 in,
 					headsep = 10mm,
 					top=20mm, 
+					%footskip=-10mm,
 					%bottom=0in, left=0in, right=0in
 					]{geometry}
 
@@ -15,7 +16,7 @@
 \usepackage{fontspec}		%Set font
 \setmainfont{Orbit}           % special by Evan Pittson Design
 
-\pagenumbering{gobble}
+%\pagenumbering{gobble}
 \setlength{\parindent}{0pt}
 
 %\usepackage{ifthen}			% if then else
@@ -57,34 +58,28 @@
 
 \begin{document}
 
-\begin{center}
-\large{ABOUT}\\
 
-\medskip
+\foreach \cardSet in  {\setNumberStart,...,\setNumberEnd}
+{	%\fancyhead{\seriesTitle}
+		\newcommand{\qrkNumber}{\large QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
+			S_{\cardSet} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} $}
+		
+		\begin{flushleft}
+			\large{ABOUT}\\
+			
+			\medskip
+			\small{Enjoy the experience of your personal set of postcards from the POSTAL SCORES series. Each postcard is a performance score. As a postcard set owner, a card's sender, a card's recipient,  or a card's viewer, your actions with any postcard from the set becomes a performance. \\
+			
+			\medskip
+			
+			Each card sets up a different scenario. The card sender, the card recipient, or a combination of the two can carry out the scenario. Participating creates a shared experience. It is an experience that transcends distance.  Participants have the opportunity to reflect on how these actions enhance their postal relationship. How do the actions affect a sender's mindset? How do the actions affect a recipient's mindset or experience? What might change for an onlooker? This set of POSTAL SCORES postcards is about the shared postal experience, not about the postcard.  \\}
+			\end{flushleft}
+		
+		\fancyfoot[C]{\tiny{\qrkNumber}\\
+					\medskip
+					\includegraphics[scale=0.2]{logo.png}}
+			\newpage
+}
 
-\small{Enjoy the experience of your personal set of postcards from the Postal Scores series. Each postcard is a performance score. As a set owner, a card's sender, a card's recipient,  or a card's viewer, your actions with an element of this set of postcards become a performance. \\
 
-\medskip
-
-Each card sets up a different scenario that a card sender and card recipient can enact. By participating, they get to experience different actions and have the opportunity to reflect on how these actions enhance their postal relationship.\\}
-\end{center}
-
-%\foreach \cardSet in  {\setNumberStart,...,\setNumberEnd}
-%{	\fancyhead{\seriesTitle}
-%		\newcommand{\qrkNumber}{\large QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
-%			S_{\cardSet} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} $}
-%		\vspace*{0.01in}
-%		\begin{center}
-%			%\seriesTitle\\
-%			\qrkNumber\\
-%			\medskip
-%			\includegraphics[scale=0.2]{logo.png}
-%		\end{center}
-%		\newpage
-%}
-\fancyfoot[C]{NUMBERS \thepage}
-
-\newpage
-jkjl
-\fancyfoot[C]{NUMBERS \thepage}
 \end{document}
