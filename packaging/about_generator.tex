@@ -2,15 +2,18 @@
 
 % --- Packages
 \usepackage[paperwidth= 4.25 in, paperheight= 5.5 in,
-					headsep = 10mm,
-					top=20mm, 
+					%headsep = 10mm,
+					%top=20mm, 
 					textheight=95mm,
-					%footskip=0mm,
+					%footskip=10mm,
 					%bottom=0in, left=0in, right=0in
 					]{geometry}
 
 \usepackage{fancyhdr}
+\setlength{\topmargin}{-50pt}
 \setlength{\headheight}{15.2pt}
+\setlength{\headsep}{10pt}
+\setlength{\footskip}{35pt}
 \pagestyle{fancy}
 \fancyhf{}
 
@@ -19,6 +22,7 @@
 
 %\pagenumbering{gobble}
 \setlength{\parindent}{0pt}
+\raggedbottom
 
 %\usepackage{ifthen}			% if then else
 \usepackage{pgffor}
@@ -37,7 +41,7 @@
 
 \newcommand{\seriesTitle}{\Huge{P}\huge{OSTAL} \Huge{S}\huge{CORES}}
 
-\newcommand{\setNumberStart}{0}
+\newcommand{\setNumberStart}{0}%{0}
 \newcommand{\setNumberEnd}{20}
 % QRK
 \newcommand{\runDate}{20200612}
@@ -52,25 +56,21 @@
 % Decorations
 \renewcommand{\headrulewidth}{15pt}
 \renewcommand{\headwidth}{0.75\paperwidth}
+\renewcommand{\footrulewidth}{15pt}
 
-%\makeatletter
-%\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ 1.1em{\hss .\hss }\hfill \kern \z@}
-%\makeatother
 
 \makeatletter
-\newcommand \Dotfill {\leavevmode \cleaders \hb@xt@ 2.25em{\hss \includegraphics[scale=0.05]{logo.png}\hss }\hfill \kern \z@}
+\newcommand \Dotfill {\hspace*{-7mm} \leavevmode \cleaders \hb@xt@ 2.3em{\hss \includegraphics[scale=0.05]{logo.png}\hss }\hfill \kern \z@}
 \makeatother
 
 \renewcommand{\headrule}{\vbox to 0pt{\hbox to \headwidth{\Dotfill}\vss}}
-
+\renewcommand{\footrule}{\vbox to 0pt{\hbox to \headwidth{\Dotfill}\vss}}
 
 
 \begin{document}
 \foreach \cardSet in  {\setNumberStart,...,\setNumberEnd}
-{
-		\newcommand{\qrkNumber}{ QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
-			S_{\cardSet} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} $}
-		
+{		\newcommand{\qrkNumber}{ QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
+			S_{\cardSet} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} $}	
 		\begin{flushleft}
 			\large{ABOUT}\\
 			
@@ -90,8 +90,8 @@
 			}
 			\end{flushright}
 		
-		\fancyfoot[C]{\scriptsize{\qrkNumber}}
-		\newpage
+		\fancyfoot[C]{\vspace*{3mm}\scriptsize{\qrkNumber}} 
+		\newpage 
 }
 
 
