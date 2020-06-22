@@ -1,9 +1,5 @@
 \begin{tikzpicture}[]	
 
-%\node [fill=black!30!white] 
-			%rounded corners]
-%			at (0,0) {\includegraphics[scale=0.25]{logo.png}};
-
 % stamp corner UR
 \fill [black!5!white] (8,3.5) rectangle (10,5);
 
@@ -14,16 +10,9 @@
 \node [] at (10,5) {\includegraphics[scale=0.05]{logo.png}};
 
 % lines
-\draw[line width = 0.005cm,fill=black!30!white]     (\lineLeft,\topLineY) to (\lineLeft+\lineLength,\topLineY);
+\draw[line width = 0.005cm,fill=black!30!white] (\lineLeft,\topLineY) to (\lineLeft+\lineLength,\topLineY);
 \draw[line width = 0.005cm,fill=black!30!white] (\lineLeft,\topLineY-\lineSpacing) to (\lineLeft+\lineLength,\topLineY-\lineSpacing);
 \draw[line width = 0.005cm,fill=black!30!white] 	(\lineLeft,\topLineY-2*\lineSpacing) to (\lineLeft+\lineLength,\topLineY-2*\lineSpacing);
-
-%\foreach \num in {\lineLeft,\lineLeft+\lineLength}
-% 	\node [anchor=center] at (\num, \topLineY) {\includegraphics[scale=0.05]{logo.png}};
-%\foreach \num in {\lineLeft,\lineLeft+\lineLength}
-% 	\node [anchor=center] at (\num, \topLineY-\lineSpacing) {\includegraphics[scale=0.05]{logo.png}};
-%\foreach \num in {\lineLeft,\lineLeft+\lineLength}
-% 	\node [anchor=center] at (\num, \topLineY-2*\lineSpacing) {\includegraphics[scale=0.05]{logo.png}};
 
 % stamp corner
 \foreach \num in {8.666,9.333}

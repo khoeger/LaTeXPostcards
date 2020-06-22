@@ -1,0 +1,35 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[paperwidth= 5.5 in, paperheight=4.25 in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\usepackage{fontspec}		%Set font
+\setmainfont{Orbit}           % special by Evan Pittson Design
+
+\usepackage{tikz}
+\usepackage{hyperref} % urls
+ \urlstyle{same}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+ 
+
+\pagenumbering{gobble}
+\begin{document}
+% --- Postcard Fronts
+% 1 set
+\includepdf[	pages={2-20,22},
+					noautoscale,
+					pagecommand=	{
+													\begin{tikzpicture}[remember picture, overlay]				
+													\node[rotate=-90] at (13.15,-6.5) {\url{www.qugrysrkatztu.github.io} 
+								\textcopyright2020};
+													\end{tikzpicture}
+												}
+					]{latexBack.pdf}
+
+\end{document}

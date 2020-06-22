@@ -4,16 +4,19 @@
 
 \usepackage[final]{pdfpages}
 
+\usepackage{tikz}
+
 \pagenumbering{gobble}
 
 \begin{document}
 % --- Postcard Fronts
 % 1 set
-\includepdf[	pages={2-20,22},
+\includepdf[	pages={1-20},
 					duplicatepages=21,
 					nup=2x2,
 					frame=true,
-					noautoscale
-					]{generalBack/latexBack.pdf}
+					noautoscale,
+					]{generalBack/allBacks_with_url.pdf}
+					%]{generalBack/latexBack.pdf}
 
 \end{document}
