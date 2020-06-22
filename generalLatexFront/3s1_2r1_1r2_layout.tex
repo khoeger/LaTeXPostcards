@@ -34,19 +34,19 @@ S_{\set} \subset \{ S_\setNumberStart,\dots,S_{\setNumberEnd}\} \end{matrix*}$}
         { \altInstructionFormatting{\instructionsTwoS} } ;
 			\node[anchor = north west] at (\sendInsX, \sendInsY-0.4)
         { \altInstructionFormatting{\instructionsThreeS} } ;
-			% instructions - recipient 1
+		% instructions - recipient 1
 	     \node[anchor = south east](recipA) at (\recipOneInsX, \recipOneInsY+0.2)
         { \altInstructionFormatting{\tiny \instructionsOneROne} } ;
 	     \node[anchor = south east](sendB) at (\recipOneInsX, \recipOneInsY)
         {\altInstructionFormatting{\instructionsTwoROne} } ;
-	       % instructions - recipient 2
+	    % instructions - recipient 2
 	     \node[anchor = center](recipB) at (\recipTwoInsX, \recipTwoInsY-0.3)
 	      {\altInstructionFormatting{\instructionsOneRTwo} } ;
 
 	    % arrows
 	    \draw[	->]
 	 			(\sendInsX+3.25, \sendInsY+0.05) to [out=0,in=90] node [sloped, above]
-        {\tiny mail to}v(\recipOneInsX -0.5 , \recipOneInsY+0.875);
+        {\tiny mail to}(\recipOneInsX -0.5 , \recipOneInsY+0.875);
 	    \draw[ ->]
 	 			(\recipOneInsX-3.25,\recipOneInsY+0.75) to [out=-180,in=180] node
         [sloped, below] {\tiny mail to} (\recipTwoInsX -1, \recipTwoInsY+0.1);
