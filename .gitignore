@@ -6,6 +6,7 @@
 *.dvi
 *.synctex.gz
 *processing
+*.out
 
 DSCF2107.JPG
 businessCard.tex
