@@ -5,14 +5,15 @@
 \usepackage[final]{pdfpages}
 
 \pagenumbering{gobble}
+\usepackage[RTLdocument]{bidi}
 
 \begin{document}
-% --- Bellybands
+% --- ALL ABOUT CARDS
 \includepdf[	pages={1-22},
-					%duplicatepages=21,
-					nup=2x2,
+					nup=2x2,%2x2,
 					frame=true,
-					noautoscale
+					noautoscale,
+					pagecommand={\setRTL}
 					]{about_generator.pdf}
 
 \end{document}
