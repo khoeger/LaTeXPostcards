@@ -1,6 +1,8 @@
 \documentclass[letterpaper]{article}
 
 \usepackage[landscape]{geometry}
+%\usepackage[paperwidth= 5.5 in, paperheight=4.25 in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
 
 \usepackage[final]{pdfpages}
 
@@ -13,7 +15,7 @@
 \begin{document}
 % --- All Postcard Backs
 
-\includepdf [	pages = 	{
+\includepdf [	pages = 	{ %1 - 20
 											1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,	1,
 											2,	1,	
 											2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,	2,
@@ -45,6 +47,7 @@
 											20,	19,
 											20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20,	20
 										},
+						duplicatepages=21,
 						nup=2x2,
 						frame=true,
 						noautoscale
