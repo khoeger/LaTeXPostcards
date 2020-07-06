@@ -1,0 +1,26 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[paperwidth= 5.5 in, paperheight=4.25 in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+
+% ---
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- All Postcard Backs
+					
+\includepdfmerge[	noautoscale	,
+								rotateoversize=true
+							]
+		{
+			run1-about-90deg.pdf, 1- 22,
+			run1-fronts.pdf, 1 - 420 ,
+			run2-about-90deg.pdf, 1- 22,
+			run2-fronts.pdf,  1 - 420
+		}
+
+\end{document}

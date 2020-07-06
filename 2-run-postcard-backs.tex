@@ -1,0 +1,33 @@
+\documentclass[letterpaper]{article}
+
+%\usepackage[landscape]{geometry}
+\usepackage[paperwidth= 5.5 in, paperheight=4.25 in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\usepackage{tikz}
+
+\usepackage{afterpage}
+\newcommand\myemptypage{
+    \null
+    \thispagestyle{empty}
+    \addtocounter{page}{-1}
+    \newpage
+    }
+
+% ---
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- All Postcard Backs
+
+
+\includepdf [	pages = 	{ 1 - 840 },
+						noautoscale,
+						angle=180
+					]
+					{postcard-backs-1up-twice.pdf}
+							
+\end{document}

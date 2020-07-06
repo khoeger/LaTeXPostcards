@@ -1,0 +1,24 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[paperwidth= 5.5 in, paperheight=4.25 in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\usepackage{tikz}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- All Postcard Backs
+					
+\includepdfmerge[	noautoscale,
+								angle=180
+							]{
+		nBlankPages.pdf, 1- 22,
+		postcard-backs-1up.pdf, 1 - 420 ,
+		nBlankPages.pdf, 1- 22,
+		postcard-backs-1up.pdf,  1 - 420
+		}
+
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[paperwidth= 5.5 in, paperheight=4.25 in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+
+% ---
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- All Postcard Backs
+\includepdfmerge[	noautoscale
+							]
+		{
+			fronts/884-fronts.pdf	,	415,
+			884-backs-1up.pdf		,  415
+		}
+\end{document}

@@ -1,0 +1,20 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[paperwidth= 5.5 in, paperheight=4.25 in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- Postcard Fronts
+% 1 set
+\includepdf[	pages={1-22},
+					%nup=2x2,
+					noautoscale,
+					%landscape
+					angle=90
+					%rotateoversize=true
+					]{run1-about.pdf}
+\end{document}

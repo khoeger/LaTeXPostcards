@@ -1,0 +1,22 @@
+\documentclass[letterpaper]{article}
+
+%\usepackage[landscape]{geometry}
+\usepackage[paperwidth= 5.5 in, paperheight=4.25 in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\usepackage{tikz}
+
+% ---
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- All Postcard Backs
+
+\includepdf [	pages = 	{ 1 - 20 },
+						duplicatepages=21,
+						noautoscale
+					]{generalBack/allBacks_with_url.pdf}
+\end{document}
