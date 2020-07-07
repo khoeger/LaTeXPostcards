@@ -24,13 +24,11 @@ Place a logo .png file in the root folder to add a logo.
 ### Generate Postcard Fronts
 Please generate postcard front files in the order given below, in Files to Compile and Run.
 
-#### File System Specifics
-
-##### Constants
+#### Constants
 The constant files contain the constants necessary to generate each card.
 To create a custom set of cards, modify the constants.
 
-##### Layouts
+#### Layouts
 Card layouts are in the layout folder.
 To modify the placement of elements of a card, modify the card layouts. If you do not want to change the layout, and only want to change the content, you do not need to modify the layout files.
 
@@ -42,7 +40,14 @@ For example, the file named '0s_1r_layout.tex' is the layout for a card with 0 s
 2. Run 'front_in_order_small.tex'. This reduces all postcards to 95% so that there is a defined border. It lays the cards out in sequential order, ready to be rearranged for printing.
 
 ### Generate Postcard Backs
+#### Layouts
+Card layout files are in the layout folder.
+The standard postcard back file is 'standard_back_layout.tex'.
+The double recipient postcard layout is 'double_recipient_back_layout.tex'.
 
+#### Files to Compile and Run
+3. Run 'generated_backs.tex'.
+4. Run 'generated_backs_plus_url.tex'. 
 ### Put it all together - Printing layout
 
 #### Personal Printer
