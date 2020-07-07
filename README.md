@@ -4,7 +4,7 @@ This is the current code used used to create
 [QuGyrs R. Katzu Press](https://qugyrsrkatztu.github.io)'s Postal Scores.
 
 There are 20 postcards in a Postal Score set, along with one instruction card.
-The cards are 5.5"x4.25" by default.
+The cards are 5.5"x4" by default. Dimensions can be changed in the globalVariables file. 
 
 Work & README in progress.
 
@@ -47,7 +47,8 @@ The double recipient postcard layout is 'double_recipient_back_layout.tex'.
 
 #### Files to Compile and Run
 3. Run 'generated_backs.tex'. This produces one copy of all backs.
-4. Run 'generated_backs_plus_url.tex'. This resizes each back and adds a url. 
+4. Run 'generated_backs_plus_url.tex'. This resizes each back and adds a url.
+
 ### Put it all together - Printing layout
 
 #### Personal Printer
