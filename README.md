@@ -15,6 +15,12 @@ I used XeLaTeX to generate files because of my font choice.
 
 Generate Postcard Fronts -> Generate Postcard Backs ->
 
+### Global Values
+Global variables are found in 'globalVariables.tex' in the root folder.
+Make changes there.
+Place a logo .png file in the root folder to add a logo.
+
+
 ### Generate Postcard Fronts
 Please generate postcard front files in the order given below, in Files to Compile and Run.
 
