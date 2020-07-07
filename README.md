@@ -3,19 +3,45 @@
 This is the current code used used to create
 [QuGyrs R. Katzu Press](https://qugyrsrkatztu.github.io)'s Postal Scores.
 
-## How to Compile A Set of Postal Scores
+There are 20 postcards in a Postal Score set, along with one instruction card.
+The cards are 5.5"x4.25" by default.
+
+Work & README in progress.
+
+## Compile Your own Set of Postal Scores
 To compile a set of postal scores on your own, files need to be compiled in order.
-Certain files take in specific output.
+
+Follow along by generating the code in the order below.
+
+Generate Postcard Fronts - Generate Postcard Backs -
+
 ### Generate Postcard Fronts
-#### File System
+Please generate postcard front files in the order given below, in Files to Compile and Run.
+
+#### File System Specifics
+
+##### Constants
+The constant files contain the constants necessary to generate each card.
+To create a custom set of cards, modify the constants.
+
 ##### Layouts
 Card layouts are in the layout folder.
+To modify the placement of elements of a card, modify the card layouts. If you do not want to change the layout, and only want to change the content, you do not need to modify the layout files.
+
 Layouts are identified by the number of senders and receivers.
 For example, the file named '0s_1r_layout.tex' is the layout for a card with 0 senders and 1 recipient.
 
 #### Files to Compile and Run
-1. Run 'generate_postcard_front.tex'.
+1. Run 'generate_postcard_front.tex'. This generates all postcard fronts, in at 100% scale
 2. Run 'front_in_order_small.tex'.
+
+### Generate Postcard Backs
+
+### Put it all together - Printing layout
+
+#### Personal Printer
+
+#### Print Shop
 
 ## Works Referenced
 - [Business Card Template](https://www.overleaf.com/gallery/tagged/business-cards)
