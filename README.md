@@ -46,8 +46,8 @@ The standard postcard back file is 'standard_back_layout.tex'.
 The double recipient postcard layout is 'double_recipient_back_layout.tex'.
 
 #### Files to Compile and Run
-3. Run 'generated_backs.tex'.
-4. Run 'generated_backs_plus_url.tex'. 
+3. Run 'generated_backs.tex'. This produces one copy of all backs.
+4. Run 'generated_backs_plus_url.tex'. This resizes each back and adds a url. 
 ### Put it all together - Printing layout
 
 #### Personal Printer
