@@ -13,7 +13,7 @@ To compile a set of postal scores on your own, files need to be compiled in orde
 
 Follow along by generating the code in the order below.
 
-Generate Postcard Fronts - Generate Postcard Backs -
+Generate Postcard Fronts -> Generate Postcard Backs ->
 
 ### Generate Postcard Fronts
 Please generate postcard front files in the order given below, in Files to Compile and Run.
@@ -32,8 +32,8 @@ Layouts are identified by the number of senders and receivers.
 For example, the file named '0s_1r_layout.tex' is the layout for a card with 0 senders and 1 recipient.
 
 #### Files to Compile and Run
-1. Run 'generate_postcard_front.tex'. This generates all postcard fronts, in at 100% scale
-2. Run 'front_in_order_small.tex'.
+1. Run 'generate_postcard_front.tex'. This generates all postcard fronts at 100% scale
+2. Run 'front_in_order_small.tex'. This reduces all postcards to 95% so that there is a defined border. It lays the cards out in sequential order, ready to be rearranged for printing.
 
 ### Generate Postcard Backs
 
