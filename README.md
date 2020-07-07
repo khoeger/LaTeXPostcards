@@ -1,4 +1,4 @@
-# Make a Postal Score Postcards using TeX
+# Generate your own Postal Score Postcards using TeX
 
 This is the current code used used to create
 [QuGyrs R. Katzu Press](https://qugyrsrkatztu.github.io)'s Postal Scores.
@@ -9,9 +9,9 @@ The cards are 5.5"x4.25" by default.
 Work & README in progress.
 
 ## Compile Your own Set of Postal Scores
-To compile a set of postal scores on your own, files need to be compiled in order.
+To compile a set of postal scores on your own, compile the files using LaTeX. Compile using the order shown below.
 
-Follow along by generating the code in the order below.
+I used XeLaTeX to generate files because of my font choice.
 
 Generate Postcard Fronts -> Generate Postcard Backs ->
 
