@@ -49,9 +49,17 @@ The double recipient postcard layout is 'double_recipient_back_layout.tex'.
 3. Run 'generated_backs.tex'. This produces one copy of all backs.
 4. Run 'generated_backs_plus_url.tex'. This resizes each back and adds a url.
 
-### Put it all together - Printing layout
+### Put it all together - Printing layouts
+Assembling for print can only be done after cards are generated.
+Follow steps 1 - 4 first.
 
 #### Personal Printer
+It's time to print a run of Postal Scores.
+To lay out 21 sets of Postal Scores, 20 for others, and one for you,  follow steps 5 - 7 below.
+
+5. Compile 'allCards.tex'. This file has the filepath 'finalCopies/printerFormat/desktopPrinter/allCards.tex'. This will arrange all of the card fronts for printing on 8.5"x11" paper.
+6. Compile 'allBacks.tex'. This file has the filepath 'finalCopies/printerFormat/desktopPrinter/allBacks.tex'. This will arrange all of the card backs for printing on 8.5"x11" paper.
+7.  Print. The layouts have been arranged so that the card fronts and card backs line up properly.
 
 #### Print Shop
 
