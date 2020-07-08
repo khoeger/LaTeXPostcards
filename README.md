@@ -13,7 +13,7 @@ To compile a set of postal scores on your own, compile the files using LaTeX. Co
 
 I used XeLaTeX to generate files because of my font choice.
 
-Generate Postcard Fronts -> Generate Postcard Backs ->
+Generate Postcard Fronts -> Generate Postcard Backs -> Printing
 
 ### Global Values
 Global variables are found in 'globalVariables.tex' in the root folder.
@@ -49,15 +49,20 @@ The double recipient postcard layout is 'double_recipient_back_layout.tex'.
 3. Run 'generated_backs.tex'. This produces one copy of all backs.
 4. Run 'generated_backs_plus_url.tex'. This resizes each back and adds a url.
 
-### Put it all together - Printing layouts
+### Printing
 Assembling for print can only be done after cards are generated.
 Follow steps 1 - 4 first.
 
-#### Personal Printer
+If you wish to print from a personal printer at home using 8.5"x11" paper follow the *personal printer* instructions. This is a 2x2 grid (4-up) layout of cards. This can be changed in the code. This is for devices that only print single sides at a time.
+
+If you are sending your print to a print shop or if you own a professional grade printer follow the *print shop* instructions.
+The cards are laid out in a 8-up format (2x4) for 12"x18". Card fronts are on odd pages. The corresponding card backs are on even pages. The layout can be modified in the code.
+
+#### Personal Printer [OLD VERSION OF CARDS]
 It's time to print a run of Postal Scores.
 To lay out 21 sets of Postal Scores, 20 for others, and one for you,  follow steps 5 - 7 below.
 
-5. Compile 'allCards.tex'. This file has the filepath 'finalCopies/printerFormat/desktopPrinter/allCards.tex'. This will arrange all of the card fronts for printing on 8.5"x11" paper.
+5. Compile 'allCards.tex'. This file has the filepath 'finalCopies/printerFormat/desktopPrinter/allCards.tex'. This will arrange all of the card fronts for printing on 8.5"x11" paper. If you wish to change the print arrangement, use both this file and allBacks to do so.
 6. Compile 'allBacks.tex'. This file has the filepath 'finalCopies/printerFormat/desktopPrinter/allBacks.tex'. This will arrange all of the card backs for printing on 8.5"x11" paper.
 7.  Print. The layouts have been arranged so that the card fronts and card backs line up properly.
 
