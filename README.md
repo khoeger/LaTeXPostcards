@@ -4,7 +4,7 @@ This is the current code used used to create
 [QuGyrs R. Katzu Press](https://qugyrsrkatztu.github.io)'s Postal Scores.
 
 There are 20 postcards in a Postal Score set, along with one instruction card.
-The cards are 5.5"x4" by default. Dimensions can be changed in the globalVariables file. 
+The cards are 5.5"x4" by default. Dimensions can be changed in the globalVariables file.
 
 Work & README in progress.
 
@@ -56,6 +56,8 @@ The double recipient postcard layout is 'double_recipient_back_layout.tex'.
 #### Print Shop
 
 ## Works Referenced
+
+### Latex
 - [Business Card Template](https://www.overleaf.com/gallery/tagged/business-cards)
 Specifically, [Karol Koziol](https://www.overleaf.com/latex/templates/business-card-template/yrqjgydpprrb)'s and [Helena Rasche and LianTze Lim](https://www.overleaf.com/latex/templates/business-card-for-programmers-slash-developers-with-photo/wymnjgtxkdwh)
 - [Front Back Business Card](https://olivierpieters.be/blog/2017/02/11/designing-a-business-card-in-latex) by Olivier Pieters
@@ -64,3 +66,7 @@ Specifically, [Karol Koziol](https://www.overleaf.com/latex/templates/business-c
 - [PDF Pages](http://mirror.utexas.edu/ctan/macros/latex/contrib/pdfpages/pdfpages.pdf)
 - [This Page Style](http://www.personal.ceu.hu/tex/pagestyl.htm#thispgstyle)
 - [Overlay Text On Photos](https://tex.stackexchange.com/questions/20792/how-to-superimpose-latex-on-a-picture) - make a grid of 4
+
+### Postcard Design
+- [Commercial Letters, Flats, and Parcels Design Standards](https://pe.usps.com/text/dmm300/201.htm#ep1088631)
+- [Physical Standards for Commercial Letters and Postcards](https://pe.usps.com/text/qsg300/Q201.htm#1009536)
