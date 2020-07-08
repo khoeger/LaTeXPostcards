@@ -66,7 +66,7 @@ To lay out 21 sets of Postal Scores, 20 for others, and one for you,  follow ste
 6. Compile 'allBacks.tex'. This file has the filepath 'finalCopies/printerFormat/desktopPrinter/allBacks.tex'. This will arrange all of the card backs for printing on 8.5"x11" paper.
 7.  Print. The layouts have been arranged so that the card fronts and card backs line up properly.
 
-#### Print Shop
+#### Print Shop [MOST RECENT VERSION OF CARDS]
 
 ## Works Referenced
 
