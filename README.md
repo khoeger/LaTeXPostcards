@@ -29,6 +29,7 @@ The constant files contain the constants necessary to generate each card.
 To create a custom set of cards, modify the constants.
 
 #### Layouts
+**This section will change once I finish my card 19 redesign.**
 Card layouts are in the layout folder.
 To modify the placement of elements of a card, modify the card layouts. If you do not want to change the layout, and only want to change the content, you do not need to modify the layout files.
 
@@ -67,6 +68,7 @@ To lay out 21 sets of Postal Scores, 20 for others, and one for you,  follow ste
 7.  Print. The layouts have been arranged so that the card fronts and card backs line up properly.
 
 #### Print Shop [MOST RECENT VERSION OF CARDS]
+Details coming soon. The cards are being revamped.
 
 ## Works Referenced
 
