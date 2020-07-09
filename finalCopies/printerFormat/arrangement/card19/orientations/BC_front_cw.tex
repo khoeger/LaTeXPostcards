@@ -1,0 +1,25 @@
+\documentclass[letterpaper]{article}
+
+%-- imports
+\input{../../../../../globalVariables.tex}
+
+\usepackage[	paperwidth= \cardWidth in, 
+						paperheight=\cardHeight in,
+						top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- Postcard Fronts
+% 1 set
+\includepdf[	pages={1-21},
+					%nup=2x2,
+					noautoscale,
+					%landscape
+					%angle=180
+					%rotateoversize=true
+					]{../resize_order/BC_front.pdf}
+\end{document}
