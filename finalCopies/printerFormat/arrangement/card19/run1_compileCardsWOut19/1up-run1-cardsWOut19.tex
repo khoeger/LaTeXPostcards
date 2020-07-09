@@ -1,0 +1,32 @@
+\documentclass[letterpaper]{article}
+
+%-- imports
+\input{../../../../../globalVariables.tex}
+
+\usepackage[	paperwidth= \cardWidth in, 
+						paperheight=\cardHeight in,
+						top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+
+% ---
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- All Postcard Backs
+					
+\includepdfmerge[	noautoscale		,			
+								%angle=-90			,
+								%nup=4x2
+							]
+		{	% odd page
+			resized_ccw_abouts.pdf, 		1-22,
+			../../nBlankPages, 1-2,
+			../../../../../postcardFront/front_in_order_small.pdf, 1-378,
+			../../../../../postcardFront/front_in_order_small.pdf, 400-420
+		}
+
+\end{document}
