@@ -1,7 +1,7 @@
 \documentclass[letterpaper]{article}
 
 %-- imports
-\input{../../../../../../globalVariables.tex}
+\input{../../../../../globalVariables.tex}
 
 \usepackage[	paperwidth= \cardWidth in, 
 						paperheight=\cardHeight in,
@@ -10,13 +10,21 @@
 
 \usepackage[final]{pdfpages}
 
+
+% ---
+
 \pagenumbering{gobble}
 
 \begin{document}
-% --- Postcard Fronts
-% 1 set
-\includepdf[	pages={2-19,21-23},
-					scale=0.95,
-					%angle=180
-					]{../../../../../../postcardFront/generate_doublecard19_AB_front.pdf}
+% --- All Postcard Backs
+					
+\includepdfmerge[	noautoscale		,			
+								%angle=-90			,
+								%nup=4x2
+							]
+		{	% odd page
+			about_backs.pdf, 		1	-	24,
+			399_backs.pdf, 			1	-	399
+		}
+
 \end{document}

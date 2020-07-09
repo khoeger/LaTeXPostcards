@@ -1,0 +1,20 @@
+\documentclass[letterpaper]{article}
+
+% --- File inclusions
+\input{../../../../../globalVariables.tex}
+
+\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- Postcard Fronts
+% 1 set
+\includepdf[	pages={1-22},
+					scale=0.95,
+					angle=90
+					]{../../../../../packaging/about_generator.pdf}
+\end{document}

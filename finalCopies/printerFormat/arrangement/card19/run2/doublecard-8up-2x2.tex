@@ -1,0 +1,122 @@
+\documentclass[letterpaper]{article}
+
+\usepackage[paperwidth= 18 in, paperheight=12 in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+
+% ---
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- All Postcard Backs
+					
+\includepdfmerge[	noautoscale		,			
+								angle=-90			,
+								nup=4x2
+							]
+		{
+			% odd page
+			orientations/AB_back_cw.pdf, 		1,
+			orientations/AB_front_ccw.pdf, 	1,
+			orientations/AB_back_cw.pdf, 		2,
+			orientations/AB_front_ccw.pdf, 	2,
+			orientations/AB_back_cw.pdf, 		3,
+			orientations/AB_front_ccw.pdf, 	3,
+			orientations/AB_back_cw.pdf, 		4,
+			orientations/AB_front_ccw.pdf, 	4,
+			% even page	
+			orientations/BC_back_ccw.pdf, 	2,	
+			orientations/BC_front_cw.pdf, 	2,	
+			orientations/BC_back_ccw.pdf, 	1,	
+			orientations/BC_front_cw.pdf, 	1,	
+			orientations/BC_back_ccw.pdf, 	4,	
+			orientations/BC_front_cw.pdf, 	4,	
+			orientations/BC_back_ccw.pdf, 	3,	
+			orientations/BC_front_cw.pdf, 	3,	
+			% odd page
+			orientations/AB_back_cw.pdf, 		5,
+			orientations/AB_front_ccw.pdf, 	5,
+			orientations/AB_back_cw.pdf, 		6,
+			orientations/AB_front_ccw.pdf, 	6,
+			orientations/AB_back_cw.pdf, 		7,
+			orientations/AB_front_ccw.pdf, 	7,
+			orientations/AB_back_cw.pdf, 		8,
+			orientations/AB_front_ccw.pdf, 	8,
+			% even page	
+			orientations/BC_back_ccw.pdf, 	6,	
+			orientations/BC_front_cw.pdf, 	6,	
+			orientations/BC_back_ccw.pdf, 	5,	
+			orientations/BC_front_cw.pdf, 	5,	
+			orientations/BC_back_ccw.pdf, 	8,	
+			orientations/BC_front_cw.pdf, 	8,	
+			orientations/BC_back_ccw.pdf, 	7,	
+			orientations/BC_front_cw.pdf, 	7,	
+			% odd page
+			orientations/AB_back_cw.pdf, 		9,
+			orientations/AB_front_ccw.pdf, 	9,
+			orientations/AB_back_cw.pdf, 		10,
+			orientations/AB_front_ccw.pdf, 	10,
+			orientations/AB_back_cw.pdf, 		11,
+			orientations/AB_front_ccw.pdf, 	11,
+			orientations/AB_back_cw.pdf, 		12,
+			orientations/AB_front_ccw.pdf, 	12,
+			% even page	
+			orientations/BC_back_ccw.pdf, 	10,	
+			orientations/BC_front_cw.pdf, 	10,	
+			orientations/BC_back_ccw.pdf, 	9,	
+			orientations/BC_front_cw.pdf, 	9,	
+			orientations/BC_back_ccw.pdf, 	12,	
+			orientations/BC_front_cw.pdf, 	12,	
+			orientations/BC_back_ccw.pdf, 	11,	
+			orientations/BC_front_cw.pdf, 	11,	
+			% odd page
+			orientations/AB_back_cw.pdf, 		13,
+			orientations/AB_front_ccw.pdf, 	13,
+			orientations/AB_back_cw.pdf, 		14,
+			orientations/AB_front_ccw.pdf, 	14,
+			orientations/AB_back_cw.pdf, 		15,
+			orientations/AB_front_ccw.pdf, 	15,
+			orientations/AB_back_cw.pdf, 		16,
+			orientations/AB_front_ccw.pdf, 	16,
+			% even page	
+			orientations/BC_back_ccw.pdf, 	14,	
+			orientations/BC_front_cw.pdf, 	14,	
+			orientations/BC_back_ccw.pdf, 	13,	
+			orientations/BC_front_cw.pdf, 	13,	
+			orientations/BC_back_ccw.pdf, 	16,	
+			orientations/BC_front_cw.pdf, 	16,	
+			orientations/BC_back_ccw.pdf, 	15,	
+			orientations/BC_front_cw.pdf, 	15,	
+			% odd page
+			orientations/AB_back_cw.pdf, 		17,
+			orientations/AB_front_ccw.pdf, 	17,
+			orientations/AB_back_cw.pdf, 		18,
+			orientations/AB_front_ccw.pdf, 	18,
+			orientations/AB_back_cw.pdf, 		19,
+			orientations/AB_front_ccw.pdf, 	19,
+			orientations/AB_back_cw.pdf, 		20,
+			orientations/AB_front_ccw.pdf, 	20,
+			% even page	
+			orientations/BC_back_ccw.pdf, 	18,	
+			orientations/BC_front_cw.pdf, 	18,	
+			orientations/BC_back_ccw.pdf, 	17,	
+			orientations/BC_front_cw.pdf, 	17,	
+			orientations/BC_back_ccw.pdf, 	20,	
+			orientations/BC_front_cw.pdf, 	20,	
+			orientations/BC_back_ccw.pdf, 	19,	
+			orientations/BC_front_cw.pdf, 	19,	
+			%last odd page
+			orientations/AB_back_cw.pdf, 		21,
+			orientations/AB_front_ccw.pdf, 	21,
+			../nBlankPages,							1-6,
+			% last even page	
+			../nBlankPages,							1-2,
+			orientations/BC_back_ccw.pdf, 	21,	
+			orientations/BC_front_cw.pdf, 	21,	
+			../nBlankPages,							1-4,
+		}
+
+\end{document}

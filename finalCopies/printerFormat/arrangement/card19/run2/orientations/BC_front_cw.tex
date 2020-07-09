@@ -1,7 +1,7 @@
 \documentclass[letterpaper]{article}
 
 %-- imports
-\input{../../../../../../globalVariables.tex}
+\input{../../../../../globalVariables.tex}
 
 \usepackage[	paperwidth= \cardWidth in, 
 						paperheight=\cardHeight in,
@@ -15,8 +15,11 @@
 \begin{document}
 % --- Postcard Fronts
 % 1 set
-\includepdf[	pages={2-19,21-23},
-					scale=0.95,
-					%angle=180
-					]{../../../../../../postcardFront/generate_doublecard19_AB_front.pdf}
+\includepdf[	pages={1-21},
+					%nup=2x2,
+					noautoscale,
+					%landscape
+					angle=180
+					%rotateoversize=true
+					]{../resize_order/BC_front.pdf}
 \end{document}
