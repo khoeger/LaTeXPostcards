@@ -1,15 +1,19 @@
 \documentclass[10pt]{article}
 
+
+% --- File inclusions
+\input{../globalVariables.tex}
+
 % --- Packages
-\usepackage[paperwidth= 4.25 in, paperheight= 5.5 in,
-					textheight=95mm,
+\usepackage[paperwidth= \cardHeight in, paperheight= \cardWidth in,
+					textheight=100mm,
 					]{geometry}
 
 \usepackage{fancyhdr}
 \setlength{\topmargin}{-50pt}
 \setlength{\headheight}{15.2pt}
 \setlength{\headsep}{10pt}
-\setlength{\footskip}{35pt}
+\setlength{\footskip}{20pt}
 \pagestyle{fancy}
 \fancyhf{}
 
@@ -31,8 +35,7 @@
     filecolor=magenta,      
     urlcolor=cyan,
 }
-% --- File inclusions
-\input{../qrkVariables.tex}
+
 
 % --- Macros
 
