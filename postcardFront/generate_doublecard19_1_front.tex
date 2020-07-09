@@ -33,13 +33,13 @@
 \newcommand{\udMarginStart}{2}
 \newcommand{\senderNAnchor}{1.4}
 \newcommand{\recipientSAnchor}{-1.25}
-\newcommand{\sendInstructionsX}{-2.25}
+\newcommand{\sendInstructionsX}{-2.6}
 \newcommand{\sendInstructionsY}{1.35}
-\newcommand{\recipInstructionsX}{2.25}
+\newcommand{\recipInstructionsX}{2.5}
 \newcommand{\recipInstructionsY}{-1.175}
 % Card 19
-\newcommand{\sendInsX}{-\lrMarginStart+0.2}
-\newcommand{\sendInsY}{1.35}
+\newcommand{\sendInsX}{-\lrMarginStart+1.25}
+\newcommand{\sendInsY}{1.05}
 \newcommand{\recipOneInsX}{\lrMarginStart-0.2}
 \newcommand{\recipOneInsY}{-0.25}
 \newcommand{\recipTwoInsX}{-.5}
@@ -60,7 +60,9 @@
 
 \begin{document}
 	\newcommand{\card}{19}
-	\input{constants/card_19_constants.tex}
-	\input{cardGenerators/generate_3s_3r.tex}
-											
+%	\input{set_card_types.tex}
+%	
+	\input{constants/card_19_double.tex}
+	\input{cardGenerators/19_doublepostcard_side1.tex}
+							
 \end{document}
