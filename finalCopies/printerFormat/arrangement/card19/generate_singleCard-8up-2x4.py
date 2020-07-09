@@ -4,19 +4,12 @@ startPageEndRange   = 8
 pageSkipSize        = 8
 endPage = 423
 
-with open('singleCard-8up-2x4-py.tex','w+') as f:
+with open('finalCopies/printerFormat/arrangement/card19/run1/singleCard-8up-2x4-py.tex','w+') as f:
     f.write("\\documentclass[letterpaper]{article}")
+    f.write("\\usepackage[paperwidth= 18 in, paperheight=12 in,top=0in, bottom=0in, left=0in, right=0in ]{geometry}")
+    f.write("\\usepackage[final]{pdfpages}")
+    f.write("\\pagenumbering{gobble}\n")
 
-# \usepackage[paperwidth= 18 in, paperheight=12 in,top=0in, bottom=0in, left=0in, right=0in
-# ]{geometry}
-#
-# \usepackage[final]{pdfpages}
-#
-#
-# % ---
-#
-# \pagenumbering{gobble}
-#
 # \begin{document}
 # % --- All Postcard Backs
 #
