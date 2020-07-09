@@ -1,0 +1,68 @@
+%\documentclass[letterpaper,12pt]{article}
+
+\documentclass[10pt]{book}
+
+%-- imports
+\input{../globalVariables.tex}
+
+% page dimensions
+\newcommand{\halfHeight}{2.125} %1.9 for box!
+\newcommand{\halfWidth}{2.75}  %2.8
+
+% --- Packages
+\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+
+\usepackage{tikz} 			%draw
+
+\usepackage{fontspec}		%Set font
+\setmainfont{Orbit}           % special by Evan Pittson Design
+
+\usepackage{ifthen}			% if then else
+
+\usepackage{mathtools}
+
+% --- Formatting
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+
+
+% --- Variables
+\newcommand{\topLineY}{2.75}
+\newcommand{\lineLeft}{6.25}
+\newcommand{\nextIncrement}{\lineLeft+0.25}
+\newcommand{\lineLength}{3.5}
+\newcommand{\lineEnd}{\lineLeft+\lineLength}
+\newcommand{\lineSpacing}{0.65}
+
+\newcommand{\topAddressL}{6.5}
+\newcommand{\topAddressT}{3}
+\newcommand{\bottomAddressL}{0.1}
+\newcommand{\bottomAddressT}{3}
+\newcommand{\addressGap}{0.5}
+\newcommand{\addressLength}{3.4}
+
+\newcommand{\stampGreyPercentage}{10}
+
+\begin{document}
+	\foreach \card in {1,2,...,20}
+	{
+		\ifthenelse{\card=19}
+		{
+			% card 19's back
+			\begin{center}
+				\begin{figure}
+					\resizebox{\paperwidth}{\paperheight}
+					{\input{layouts/double_recipient_back_layout.tex}}
+				\end{figure}
+			\end{center}
+		}
+		{  % normal card backs
+			\begin{center}
+				\begin{figure}
+					\resizebox{\paperwidth}{\paperheight}
+					{\input{layouts/standard_back_layout.tex}}
+				\end{figure}
+			\end{center}
+		}
+	}
+\end{document}
