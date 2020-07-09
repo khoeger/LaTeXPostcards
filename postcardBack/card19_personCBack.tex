@@ -1,0 +1,40 @@
+\documentclass[letterpaper]{article}
+
+%-- imports
+\input{../globalVariables.tex}
+\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in
+]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\usepackage{fontspec}		%Set font
+\setmainfont{Orbit}           % special by Evan Pittson Design
+
+\usepackage{tikz}
+\usepackage{hyperref} % urls
+ \urlstyle{same}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- Postcard Backs
+% 1 set
+\includepdf[	pages={2},
+					scale=0.95,%noautoscale,
+					duplicatepages={21},
+					pagecommand=	{
+													\begin{tikzpicture}[remember picture, overlay]	
+													\node[anchor=center] at (9, -4){Person B};			
+													\node[rotate=-90] at (12.85,-6.1) {\url{www.qugrysrkatztu.github.io} 
+								\textcopyright2020};
+													\end{tikzpicture}
+												}
+					]{card19_back_base.pdf}
+
+\end{document}
