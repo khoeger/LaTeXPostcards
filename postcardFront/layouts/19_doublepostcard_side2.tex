@@ -2,7 +2,7 @@
 \newcommand{\qrkNumber}
   {QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
   \begin{matrix*}[l]
-    \card \in \{ \cardNumberStart, \dots , \cardNumberEnd\} = S_{\set}\\
+    \card \in  S_{\set}  | \{ \cardNumberStart, \dots , \cardNumberEnd\} = S_{\set}\\
     S_{\set} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\}
   \end{matrix*}$}
 \begin{tikzpicture}[]
@@ -41,8 +41,8 @@
         {\instructionFormatting{.}};
         \node[anchor= north,text = black!50!white] at (\sendInsX+1.85,\sendInsY-0.025)
         {\tiny{Person B}};
-        
-        
+
+
     	\node[anchor= north west] at (\sendInstructionsX,\sendInstructionsY-0.5)
         {R\instructionFormatting{emember}};
        	\draw (\sendInsX+0.65,\sendInsY-0.575) -- (\sendInsX+3.5,\sendInsY-0.575);
@@ -51,22 +51,22 @@
         \node[anchor= north,text = black!50!white] at (\sendInsX+2.075,\sendInsY-0.525)
         {\tiny{the memory}};
 
-        
+
 		\node[anchor= north west] at (\sendInstructionsX+0.45,\sendInstructionsY-1)
         {\instructionFormatting{with}} ;
-		\draw (\sendInsX-0.3+0.45,\sendInsY-1.075) -- (\sendInsX+0.45+1.95,\sendInsY-1.075); 
+		\draw (\sendInsX-0.3+0.45,\sendInsY-1.075) -- (\sendInsX+0.45+1.95,\sendInsY-1.075);
 		\node[anchor= north,text = black!50!white] at (\sendInsX+1.275,\sendInsY-1.025)
         {\tiny{Person A}};
-		       
+
         \node[anchor= north west] at (\sendInstructionsX+0.45,\sendInstructionsY-1.5)
         {\instructionFormatting{and}};
-      \draw (\sendInsX-0.3+0.45,\sendInsY-1.575) -- (\sendInsX+1.95+0.45,\sendInsY-1.575);        
+      \draw (\sendInsX-0.3+0.45,\sendInsY-1.575) -- (\sendInsX+1.95+0.45,\sendInsY-1.575);
         \node[anchor= north west] at (\sendInsX+2+0.45,\sendInstructionsY-1.5)
         {\instructionFormatting{?}};
         \node[anchor= north,text = black!50!white] at (\sendInsX+1.275,\sendInsY-1.525)
         {\tiny{Person C}};
-        
-        
+
+
 		\node[anchor= north west] at (\sendInstructionsX,\sendInstructionsY-2.15)
         {F\instructionFormatting{ill me with the memory.}} ;
 

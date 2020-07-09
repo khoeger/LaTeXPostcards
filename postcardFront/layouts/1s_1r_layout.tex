@@ -2,7 +2,7 @@
 \newcommand{\qrkNumber}
   {QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
   \begin{matrix*}[l]
-    \card \in \{ \cardNumberStart, \dots , \cardNumberEnd\} = S_{\set}\\
+    \card \in  S_{\set}  | \{ \cardNumberStart, \dots , \cardNumberEnd\} = S_{\set}\\
     S_{\set} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\}
   \end{matrix*}$}
 \begin{tikzpicture}[]
@@ -39,5 +39,5 @@
     	% instructions - recipient
 	     \node[anchor = south east] at (\recipInstructionsX, \recipInstructionsY)
       { \instructionFormatting{\instructionsOneR} } ;
-      
+
 \end{tikzpicture}
