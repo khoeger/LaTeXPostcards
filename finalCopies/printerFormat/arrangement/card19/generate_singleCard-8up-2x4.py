@@ -5,34 +5,40 @@ pageSkipSize        = 8
 endPage = 423
 
 with open('finalCopies/printerFormat/arrangement/card19/run1/singleCard-8up-2x4-py.tex','w+') as f:
-    f.write("\\documentclass[letterpaper]{article}")
-    f.write("\\usepackage[paperwidth= 18 in, paperheight=12 in,top=0in, bottom=0in, left=0in, right=0in ]{geometry}")
-    f.write("\\usepackage[final]{pdfpages}")
-    f.write("\\pagenumbering{gobble}\n")
+    f.write("\\documentclass[letterpaper]{article}\n")
+    f.write("\\usepackage[\tpaperwidth= 18 in, "    +
+            "\n\t\t\t\t\t\t\tpaperheight=12 in,"    +
+            "\n\t\t\t\t\t\t\ttop=0in, "             +
+            "\n\t\t\t\t\t\t\tbottom=0in, "          +
+            "\n\t\t\t\t\t\t\tleft=0in, "            +
+            "\n\t\t\t\t\t\t\tright=0in "            +
+            "\n\t\t\t\t\t\t]{geometry}\n")
+    f.write("\\usepackage[final]{pdfpages}\n")
+    f.write("\\pagenumbering{gobble}\n\n")
 
-# \begin{document}
-# % --- All Postcard Backs
-#
-# \includepdfmerge[	noautoscale		,
-# 								angle=-90			,
-# 								nup=4x2
-# 							]
-# 		{
-# 			% about pages
-# 			compileCardsWOut19/cardsWOut19_front_1up.pdf,	1		-		8		,
-# 			compileCardsWOut19/cardsWOut19_back_1up.pdf,	8		-		1		,
-# 			compileCardsWOut19/cardsWOut19_front_1up.pdf,	9		-		16	,
-# 			compileCardsWOut19/cardsWOut19_back_1up.pdf,	16	-		9		,
-# 			compileCardsWOut19/cardsWOut19_front_1up.pdf,	17	-		24	,
-# 			compileCardsWOut19/cardsWOut19_back_1up.pdf,	24	-		17	,
-# 			% general cards
-# 			compileCardsWOut19/cardsWOut19_front_1up.pdf,	25		-	32	,
-# 			compileCardsWOut19/cardsWOut19_back_1up.pdf,	32		-	25	,
-# 			compileCardsWOut19/cardsWOut19_front_1up.pdf,	33		-	40	,
-# 			compileCardsWOut19/cardsWOut19_back_1up.pdf,	40	-		33	,
-# 			compileCardsWOut19/cardsWOut19_front_1up.pdf,	41	-		48	,
-# 			compileCardsWOut19/cardsWOut19_back_1up.pdf,	48	-		41	,
-# 		}
+    f.write("\\begin{document}\n\n")
+
+    f.write("\\includepdfmerge[\tnoautoscale\t,"    +
+            "\n\t\t\t\t\t\t\t\t\tangle=-90\t,"      +
+            "\n\t\t\t\t\t\t\t\t\tnup=4x2\t"         +
+            "\n\t\t\t\t\t\t\t\t]\n")
+    f.write("\t\t\t\t\t\t\t\t{\n")
+    while startPageEndRange <= endPage:
+        f.write("\t\t\t\t\t\t\t\t\tcompileCardsWOut19/cardsWOut19_front_1up.pdf,\t\t"+str(startPageBeginRange)+"\t\t-\t\t"+str(startPageEndRange)+"\t\t,\n")
+        f.write("\t\t\t\t\t\t\t\t\tcompileCardsWOut19/cardsWOut19_back_1up.pdf,\t\t\t"+str(startPageEndRange)+"\t\t-\t\t"+str(startPageBeginRange)+"\t\t,\n")
+        startPageBeginRange += pageSkipSize
+        startPageEndRange   += pageSkipSize
+    f.write("\t\t\t\t\t\t\t\t\t%HARDCODED END\n")
+    f.write("\t\t\t\t\t\t\t\t\tcompileCardsWOut19/cardsWOut19_front_1up.pdf,\t\t417\t\t-\t\t423		,\n")
+    f.write("\t\t\t\t\t\t\t\t\t../../nBlankPages.pdf \t\t\t\t\t\t\t\t\t\t\t,\t\t\t1\t\t\t\t\t\t\t,\n")
+    f.write("\t\t\t\t\t\t\t\t\tcompileCardsWOut19/cardsWOut19_back_1up.pdf,\t\t420\t\t-\t\t417		,\n")
+    f.write("\t\t\t\t\t\t\t\t\t../../nBlankPages.pdf \t\t\t\t\t\t\t\t\t\t\t,\t\t\t1\t\t\t\t\t\t\t,\n")
+    f.write("\t\t\t\t\t\t\t\t\tcompileCardsWOut19/cardsWOut19_back_1up.pdf,\t\t423\t\t-\t\t421		\n")
+    f.write("\t\t\t\t\t\t\t\t}\n")
+    f.write("\t\\end{document}")
+
+
+
 #
 # \end{document}
     # while startPageEndRange <= endPage:
