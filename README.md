@@ -82,6 +82,10 @@ Specifically, [Karol Koziol](https://www.overleaf.com/latex/templates/business-c
 - [This Page Style](http://www.personal.ceu.hu/tex/pagestyl.htm#thispgstyle)
 - [Overlay Text On Photos](https://tex.stackexchange.com/questions/20792/how-to-superimpose-latex-on-a-picture) - make a grid of 4
 
+#### Related, useful seeming tools for future exploration
+- [Pandoc](https://pandoc.org/MANUAL.html?fbclid=IwAR2XQk8DuWDCo4cwZxrhQBrfcqNsIrhKEbIucZZ-R4m8bpom7iiYC6z2pfY) Universal document converter
+- [PyLaTeX](https://jeltef.github.io/PyLaTeX/current/) Python library for LaTeX
+
 ### Postcard Design
 - [Commercial Letters, Flats, and Parcels Design Standards](https://pe.usps.com/text/dmm300/201.htm#ep1088631)
 - [Physical Standards for Commercial Letters and Postcards](https://pe.usps.com/text/qsg300/Q201.htm#1009536)
