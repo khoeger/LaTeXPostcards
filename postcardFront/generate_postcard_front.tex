@@ -9,7 +9,33 @@
 \newcommand{\halfWidth}{2.75}  %2.8
 
 % --- Packages
-\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+%\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+
+\usepackage[	papersize={,},%\cropPlusCardWidth mm, \cropPlusCardHeight mm },
+						topmargin = 0mm,
+						textheight = \cropPlusCardHeight mm,
+						botmargin = 0mm,
+						ytrim = 0mm,
+						%
+						leftmargin = 0mm,
+						textwidth = \cropPlusCardWidth mm,
+						rightmargin = 0mm,
+						%
+						%
+%						spine = 0mm,
+%						xspine = 0mm,
+%						xtrim = 0mm,
+%						flap = 0mm,
+%						flap = 0mm,
+%						headheight = 0mm,
+%						headsep = 0mm,
+%%						topskip = 0mm,
+%						footskip = 0mm,
+						cropmarks,
+						cropframe, 
+						cropgap=5mm,
+					]{zwpagelayout}
+
 
 \usepackage{tikz} 			%draw
 
