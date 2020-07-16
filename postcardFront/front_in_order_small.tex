@@ -1,8 +1,33 @@
-\documentclass[letterpaper]{article}
+\documentclass[]{article}
 
 %-- imports
 \input{../globalVariables.tex}
-\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+
+
+\usepackage[	papersize={,},%\cropPlusCardWidth mm, \cropPlusCardHeight mm },
+						topmargin = 0mm,
+						textheight = \cropPlusCardHeight mm,
+						botmargin = 0mm,
+						ytrim = 0mm,
+						%
+						leftmargin = 0mm,
+						textwidth = \cropPlusCardWidth mm,
+						rightmargin = 0mm,
+						%
+						%
+%						spine = 0mm,
+%						xspine = 0mm,
+%						xtrim = 0mm,
+%						flap = 0mm,
+%						flap = 0mm,
+%						headheight = 0mm,
+%						headsep = 0mm,
+%%						topskip = 0mm,
+%						footskip = 0mm,
+						cropmarks,
+						cropframe, 
+						cropgap=5mm,
+					]{zwpagelayout}
 
 \usepackage[final]{pdfpages}
 
@@ -12,37 +37,40 @@
 % --- Postcard Fronts
 % 1 set
 \includepdf[	pages={2-19,		%17
-								21-34,		%13
-								36-49,  	%13
-								51-64,  	%13
-								66-79,		%13
-								81-94, 		%13
-								96-109, 	%13
-								111-124,	%13
-								126-139,	%13
-								141-154,	%13
-								156-169,	%13
-								171-184,	%13
-								186-199,	%13
-								201-214,	%13
-								216-229,	%13
-								231-244,	%13
-								246-259,	%13
-								261-274,	%13
-								276-289,	%13
-								291-304,	%13
-								306-319,	%13
-								321-334,	%13
-								336-349,	%13
-								351-364,	%13
-								366-379,	%13
-								381-394,	%13
-								396-409,	%13
-								411-424,	%13
-								426-439,	%13
-								441-
+%								21-34,		%13
+%								36-49,  	%13
+%								51-64,  	%13
+%								66-79,		%13
+%								81-94, 		%13
+%								96-109, 	%13
+%								111-124,	%13
+%								126-139,	%13
+%								141-154,	%13
+%								156-169,	%13
+%								171-184,	%13
+%								186-199,	%13
+%								201-214,	%13
+%								216-229,	%13
+%								231-244,	%13
+%								246-259,	%13
+%								261-274,	%13
+%								276-289,	%13
+%								291-304,	%13
+%								306-319,	%13
+%								321-334,	%13
+%								336-349,	%13
+%								351-364,	%13
+%								366-379,	%13
+%								381-394,	%13
+%								396-409,	%13
+%								411-424,	%13
+%								426-439,	%13
+%								441-
 								},
-					scale=0.95
+					%scale=0.95
+					noautoscale,
+					delta = 0 0,
+					offset = -25 29,
+					frame,
 					]{generate_postcard_front.pdf}
-
 \end{document}
