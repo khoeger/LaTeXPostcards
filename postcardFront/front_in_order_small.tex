@@ -3,31 +3,32 @@
 %-- imports
 \input{../globalVariables.tex}
 
+\usepackage[paperwidth= \cropedBoundariesW mm, paperheight=\cropedBoundariesH mm,top=0in, bottom=0in, left=0in, right=0in]{geometry}
 
-\usepackage[	papersize={,},%\cropPlusCardWidth mm, \cropPlusCardHeight mm },
-						topmargin = 0mm,
-						textheight = \cropPlusCardHeight mm,
-						botmargin = 0mm,
-						ytrim = 0mm,
-						%
-						leftmargin = 0mm,
-						textwidth = \cropPlusCardWidth mm,
-						rightmargin = 0mm,
-						%
-						%
-%						spine = 0mm,
-%						xspine = 0mm,
-%						xtrim = 0mm,
-%						flap = 0mm,
-%						flap = 0mm,
-%						headheight = 0mm,
-%						headsep = 0mm,
-%%						topskip = 0mm,
-%						footskip = 0mm,
-						cropmarks,
-						cropframe, 
-						cropgap=5mm,
-					]{zwpagelayout}
+%\usepackage[	papersize={,},%\cropPlusCardWidth mm, \cropPlusCardHeight mm },
+%						topmargin = 0mm,
+%						textheight = \cropPlusCardHeight mm,
+%						botmargin = 0mm,
+%						ytrim = 0mm,
+%						%
+%						leftmargin = 0mm,
+%						textwidth = \cropPlusCardWidth mm,
+%						rightmargin = 0mm,
+%						%
+%						%
+%%						spine = 0mm,
+%%						xspine = 0mm,
+%%						xtrim = 0mm,
+%%						flap = 0mm,
+%%						flap = 0mm,
+%%						headheight = 0mm,
+%%						headsep = 0mm,
+%%%						topskip = 0mm,
+%%						footskip = 0mm,
+%						cropmarks,
+%						cropframe, 
+%						cropgap=5mm,
+%					]{zwpagelayout}
 
 \usepackage[final]{pdfpages}
 
@@ -67,10 +68,10 @@
 %								426-439,	%13
 %								441-
 								},
-					%scale=0.95
+%					scale=1
 					noautoscale,
-					delta = 0 0,
-					offset = -25 29,
-					frame,
+%					delta = 0 0,
+%					offset = -25 29,
+%					frame,
 					]{generate_postcard_front.pdf}
 \end{document}
