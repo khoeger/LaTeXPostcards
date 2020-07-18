@@ -3,7 +3,7 @@
 %-- imports
 \input{../globalVariables.tex}
 
-\usepackage[paperwidth= \cropedBoundariesW mm, paperheight=\cropedBoundariesH mm,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+\usepackage[paperwidth= \cropPlusCardWidthBound mm, paperheight=\cropPlusCardHeightBound mm,top=0in, bottom=0in, left=0in, right=0in]{geometry}
 
 %\usepackage[	papersize={,},%\cropPlusCardWidth mm, \cropPlusCardHeight mm },
 %						topmargin = 0mm,
@@ -37,7 +37,7 @@
 \begin{document}
 % --- Postcard Fronts
 % 1 set
-\includepdf[	pages={2-19,		%17
+\includepdf[	pages={2-10,%19,		%17
 %								21-34,		%13
 %								36-49,  	%13
 %								51-64,  	%13
@@ -70,8 +70,8 @@
 								},
 %					scale=1
 					noautoscale,
-%					delta = 0 0,
-%					offset = -25 29,
+%					delta = 500 0,
+%					offset = 0 7,
 %					frame,
 					]{generate_postcard_front.pdf}
 \end{document}

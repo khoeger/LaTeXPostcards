@@ -11,9 +11,12 @@
 % --- Packages
 %\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in]{geometry}
 
-\usepackage[	papersize={,},%\cropPlusCardWidth mm, \cropPlusCardHeight mm },
+\usepackage[	%
+						papersize={ 	\cropPlusCardWidth mm,	
+											\cropPlusCardHeight mm},
+						%papersize={,},
 						topmargin = 5mm,
-						textheight = \cropPlusCardHeight mm,
+						%textheight = \cropPlusCardHeight mm,
 						botmargin = 5mm,
 						ytrim = 0mm,
 						%
@@ -33,7 +36,9 @@
 %						footskip = 0mm,
 						cropmarks,
 						cropframe, 
-						cropgap=5mm,
+						croplength = 5mm,
+						cropgap= 2.5mm,
+						nopagenumbers
 					]{zwpagelayout}
 
 
