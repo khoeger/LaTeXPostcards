@@ -1,8 +1,26 @@
 \documentclass[letterpaper]{article}
 
-%\usepackage[landscape]{geometry}
-\usepackage[paperwidth= 5.5 in, paperheight=4.25 in,top=0in, bottom=0in, left=0in, right=0in
-]{geometry}
+\input{globalVariables.tex}
+
+\usepackage[	%
+						papersize={ 	\cropPlusCardWidth mm,	
+											\cropPlusCardHeight mm},
+						%papersize={,},
+						topmargin = 5mm,
+						%textheight = \cropPlusCardHeight mm,
+						botmargin = 5mm,
+						ytrim = 0mm,
+						%
+						leftmargin = 5mm,
+						textwidth = \cropPlusCardWidth mm,
+						rightmargin = 5mm,
+						%
+						cropmarks,
+%						cropframe, 
+						croplength = 5mm,
+						cropgap= 2.5mm,
+						nopagenumbers
+					]{zwpagelayout}
 
 \pagenumbering{gobble}
 
