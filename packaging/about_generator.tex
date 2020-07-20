@@ -1,19 +1,33 @@
 \documentclass[10pt]{article}
-
-
 % --- File inclusions
 \input{../globalVariables.tex}
 
 % --- Packages
-\usepackage[paperwidth= \cardHeight in, paperheight= \cardWidth in,
-					textheight=100mm,
-					]{geometry}
+%\usepackage[paperwidth= \cardHeight in, paperheight= \cardWidth in,
+%					textheight=100mm,
+%					]{geometry}
+\usepackage[	%
+						papersize={ 	\cropPlusCardHeight mm,
+											\cropPlusCardWidth mm	},
+						%papersize={,},
+						topmargin = 7.5mm,
+						botmargin = 15mm,
+						ytrim = 0mm,
+						%
+						leftmargin = 10mm,
+						rightmargin = 10mm,
+						%
+						cropmarks,
+%						cropframe, 
+						croplength = 5mm,
+						cropgap= 2.5mm,
+						nopagenumbers,
+						%
+						headheight =12.5mm,
+						headsep =5 mm,
+					]{zwpagelayout}
 
 \usepackage{fancyhdr}
-\setlength{\topmargin}{-50pt}
-\setlength{\headheight}{15.2pt}
-\setlength{\headsep}{10pt}
-\setlength{\footskip}{20pt}
 \pagestyle{fancy}
 \fancyhf{}
 
@@ -42,7 +56,7 @@
 \newcommand{\seriesTitle}{\Huge{P}\huge{OSTAL} \Huge{S}\huge{CORES}}
 
 % Decorations
-\fancyhead[C]{\seriesTitle}
+\fancyhead[L]{\seriesTitle}
 
 \renewcommand{\headrulewidth}{15pt}
 \renewcommand{\headwidth}{0.75\paperwidth}
@@ -50,20 +64,22 @@
 
 
 \makeatletter
-\newcommand \Dotfill {\hspace*{-7mm} \leavevmode \cleaders \hb@xt@ 2.3em{\hss \includegraphics[scale=0.05]{logo.png}\hss }\hfill \kern \z@}
+\newcommand \Dotfill {\hspace*{-7mm} \leavevmode \cleaders \hb@xt@ 2.5em{\hss \includegraphics[scale=0.05]{logo.png}\hss }\hfill \kern \z@}
 \makeatother
 
 \renewcommand{\headrule}{\vbox to 0pt{\hbox to \headwidth{\Dotfill}\vss}}
 \renewcommand{\footrule}{\vbox to 0pt{\hbox to \headwidth{\Dotfill}\vss}}
 
+\newcommand{\qrkNumber}[1]{ QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
+			S_{#1} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} $}	
 
 \begin{document}
 THROWAWAY PAGE
 \newpage
 
 \foreach \cardSet in  {\setNumberStart,...,\setNumberEnd}
-{		\newcommand{\qrkNumber}{ QRK$\;$M$\multipleNum_{\iterationNumber}\;\runDate:
-			S_{\cardSet} \subset \{ S_\setNumberStart, \dots , S_{\setNumberEnd}\} $}	
+{		
+		\medskip
 		\begin{flushleft}
 			\large{ABOUT}\\
 			
@@ -78,15 +94,16 @@ THROWAWAY PAGE
 			\vspace*{2mm}
 			
 			\begin{flushright}
-			\scriptsize{	POSTAL SCORES by 
+			\scriptsize{	POSTAL SCORES\\
 								QuGyrs R. Katztu Press\\ 
 								\url{www.qugrysrkatztu.github.io}\\
+								\medskip
 								\textcopyright2020
 			}
 			\end{flushright}
 		
-		\fancyfoot[C]{\vspace*{3mm}\scriptsize{\qrkNumber}} 
-		\newpage 
+		\fancyfoot[C]{\vspace*{5mm}\scriptsize{\qrkNumber{\cardSet}}} 
+		\newpage
 }
 
 
