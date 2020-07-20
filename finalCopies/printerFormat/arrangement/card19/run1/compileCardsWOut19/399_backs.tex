@@ -3,8 +3,7 @@
 % --- File inclusions
 \input{../../../../../../globalVariables.tex}
 
-\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in
-]{geometry}
+\usepackage[paperwidth= \cropPlusCardWidthBound mm, paperheight=\cropPlusCardHeightBound mm,top=0in, bottom=0in, left=0in, right=0in]{geometry}
 
 \usepackage[final]{pdfpages}
 
@@ -14,6 +13,7 @@
 % --- Postcard Fronts
 % 1 set
 \includepdf[	pages={1},
+					noautoscale,
 					duplicatepages={399},
 					]{../../../../../../postcardBack/generated_backs_plus_url.pdf}
 \end{document}

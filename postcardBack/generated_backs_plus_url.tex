@@ -2,8 +2,8 @@
 
 %-- imports
 \input{../globalVariables.tex}
-\usepackage[paperwidth= \cardWidth in, paperheight=\cardHeight in,top=0in, bottom=0in, left=0in, right=0in
-]{geometry}
+
+\usepackage[paperwidth= \cropPlusCardWidthBound mm, paperheight=\cropPlusCardHeightBound mm,top=0in, bottom=0in, left=0in, right=0in]{geometry}
 
 \usepackage[final]{pdfpages}
 
@@ -13,11 +13,13 @@
 \usepackage{tikz}
 \usepackage{hyperref} % urls
  \urlstyle{same}
+\usepackage{xcolor}
+\definecolor{mediumaquamarine}{RGB}{10, 186, 205}
 \hypersetup{
     colorlinks=true,
     linkcolor=blue,
     filecolor=magenta,      
-    urlcolor=cyan,
+    urlcolor=mediumaquamarine,
 }
 
 \pagenumbering{gobble}
@@ -25,14 +27,14 @@
 \begin{document}
 % --- Postcard Backs
 % 1 set
-\includepdf[	pages={2-20,22},
-					scale=0.95,%noautoscale,
+\includepdf[	pages={2-19,21-22},
+					noautoscale,
 					pagecommand=	{
 													\begin{tikzpicture}[remember picture, overlay]				
-													\node[rotate=-90] at (12.85,-6.1) {\url{www.qugrysrkatztu.github.io} 
-								\textcopyright2020};
+													\node[rotate=-90] at (13.25,-6.5) {\small{\url{www.qugrysrkatztu.github.io} 
+								\textcopyright2020}};
 													\end{tikzpicture}
 												}
-					]{latexBack.pdf}
+					]{generated_backs.pdf}
 
 \end{document}
