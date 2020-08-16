@@ -10,7 +10,25 @@
 \newcommand{\halfWidth}{2.75}  %2.8
 
 % --- Packages
-\usepackage[paperwidth= \cropPlusCardWidth mm, paperheight=\cropPlusCardHeight mm,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+\usepackage[	%
+						papersize={ 	\cropPlusCardWidth mm,	
+											\cropPlusCardHeight mm},
+						%papersize={,},
+						topmargin = 2.5mm,%5mm,
+						%textheight = \cropPlusCardHeight mm,
+						botmargin = 5mm,
+						ytrim = 0mm,
+						%
+						leftmargin = 2.5mm,%5mm,
+						textwidth = \cropPlusCardWidth mm,
+						rightmargin = 2.5mm,
+						%
+						cropmarks,
+%						cropframe, 
+						croplength = 5mm,
+						cropgap= 2.5mm,
+						nopagenumbers
+					]{zwpagelayout}
 
 \usepackage{tikz} 			%draw
 
@@ -44,13 +62,10 @@
 \newcommand{\stampGreyPercentage}{10}
 
 \begin{document}
-	\foreach \card in {1}%,2,...,21}
-	{		
-			\begin{center}
-				\begin{figure}
-					\resizebox{\paperwidth}{\paperheight}
-					{\input{layouts/standard_back_layout.tex}}
-				\end{figure}
-			\end{center}
-	}
+\begin{center}
+	\begin{figure}
+		\resizebox{\cropedBoundariesW mm}{\cropedBoundariesH mm}
+		{\input{layouts/standard_back_layout.tex}}
+	\end{figure}
+\end{center}
 \end{document}
