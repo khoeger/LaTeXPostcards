@@ -3,25 +3,8 @@
 %-- imports
 \input{../globalVariables.tex}
 % --- Packages
-\usepackage[	%
-						papersize={ 	\cropPlusCardWidth mm,	
-											\cropPlusCardHeight mm},
-						%papersize={,},
-						topmargin = 5mm,
-						%textheight = \cropPlusCardHeight mm,
-						botmargin = 5mm,
-						ytrim = 0mm,
-						%
-						leftmargin = 5mm,
-						textwidth = \cropPlusCardWidth mm,
-						rightmargin = 5mm,
-						%
-						cropmarks,
-%						cropframe, 
-						croplength = 5mm,
-						cropgap= 2.5mm,
-						nopagenumbers
-					]{zwpagelayout}
+\usepackage[paperwidth= \cropPlusCardWidthBound mm, paperheight=\cropPlusCardHeightBound mm,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+
 
 \usepackage[final]{pdfpages}
 
@@ -46,15 +29,14 @@
 % --- Postcard Backs
 % 1 set
 \includepdf[	pages={2},
-					scale=0.95,%noautoscale,
+					noautoscale,
 					duplicatepages={21},
-					pagecommand=	{
-													\begin{tikzpicture}[remember picture, overlay]	
-													\node[anchor=center] at (9, -4){Person B};			
-													\node[rotate=-90] at (12.85,-6.1) {\url{www.qugrysrkatztu.github.io} 
+					pagecommand={
+									\begin{tikzpicture}[remember picture, overlay]	
+									\node[anchor=center] at (9.25, -4.25){Person B};										\node[rotate=-90] at (13.25,-6.5) {\url{www.qugrysrkatztu.github.io} 
 								\textcopyright2020};
 													\end{tikzpicture}
-												}
+								}
 					]{card19_back_base.pdf}
 
 \end{document}
