@@ -11,22 +11,22 @@
 
 % --- Packages
 \usepackage[	%
-						papersize={ 	\cropPlusCardWidth mm,	
-											\cropPlusCardHeight mm},
+						papersize={ 	\cropedBoundariesW mm,	
+											\cropedBoundariesH mm},
 						%papersize={,},
-						topmargin = 2.5mm,%5mm,
+						topmargin = 0mm,%2.5mm,%5mm,
 						%textheight = \cropPlusCardHeight mm,
-						botmargin = 5mm,
+						botmargin = 0mm,%5mm,
 						ytrim = 0mm,
 						%
-						leftmargin = 2.5mm,%5mm,
-						textwidth = \cropPlusCardWidth mm,
-						rightmargin = 2.5mm,
+						leftmargin = 0mm,%2.5mm,%5mm,
+%						textwidth = \cropedBoundariesW mm,%\cropPlusCardWidth mm,
+						rightmargin = 0mm,
 						%
-						cropmarks,
-%						cropframe, 
-						croplength = 5mm,
-						cropgap= 2.5mm,
+%						cropmarks,
+%%						cropframe, 
+%						croplength = 5mm,
+%						cropgap= 2.5mm,
 						nopagenumbers
 					]{zwpagelayout}
 
@@ -62,10 +62,12 @@
 \newcommand{\stampGreyPercentage}{10}
 
 \begin{document}
-\begin{center}
-	\begin{figure}
+	\begin{center}
+		\begin{figure}
 		\resizebox{\cropedBoundariesW mm}{\cropedBoundariesH mm}
-		{\input{layouts/standard_back_layout.tex}}
-	\end{figure}
-\end{center}
+		{
+		\input{layouts/standard_back_layout.tex}
+		}
+		\end{figure}
+	\end{center}
 \end{document}
