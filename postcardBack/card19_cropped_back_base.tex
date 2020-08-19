@@ -1,0 +1,71 @@
+%\documentclass[letterpaper,12pt]{article}
+
+\documentclass[10pt]{book}
+
+%-- imports
+\input{../globalVariables.tex}
+
+% page dimensions
+\newcommand{\halfHeight}{2.125} %1.9 for box!
+\newcommand{\halfWidth}{2.75}  %2.8
+
+% --- Packages
+\usepackage[	%
+						papersize={ 	\cropPlusCardWidth mm,	
+											\cropPlusCardHeight mm},
+						%papersize={,},
+						topmargin = 2.5mm,%5mm,
+						%textheight = \cropPlusCardHeight mm,
+						botmargin = 5mm,
+						ytrim = 0mm,
+						%
+						leftmargin = 2.5mm,%5mm,
+						textwidth = \cropPlusCardWidth mm,
+						rightmargin = 2.5mm,
+						%
+						cropmarks,
+%						cropframe, 
+						croplength = 5mm,
+						cropgap= 2.5mm,
+						nopagenumbers
+					]{zwpagelayout}
+
+\usepackage{tikz} 			%draw
+
+\usepackage{fontspec}		%Set font
+\setmainfont{Orbit}           % special by Evan Pittson Design
+
+\usepackage{ifthen}			% if then else
+
+\usepackage{mathtools}
+
+% --- Formatting
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+
+
+% --- Variables
+\newcommand{\topLineY}{2.25}
+\newcommand{\lineLeft}{6.25}
+\newcommand{\nextIncrement}{\lineLeft+0.25}
+\newcommand{\lineLength}{3.5}
+\newcommand{\lineEnd}{\lineLeft+\lineLength}
+\newcommand{\lineSpacing}{0.65}
+
+\newcommand{\topAddressL}{6.5}
+\newcommand{\topAddressT}{3}
+\newcommand{\bottomAddressL}{0.1}
+\newcommand{\bottomAddressT}{3}
+\newcommand{\addressGap}{0.5}
+\newcommand{\addressLength}{3.4}
+
+\newcommand{\stampGreyPercentage}{10}
+
+\begin{document}
+\begin{center}
+	\begin{figure}
+		\resizebox{\cropedBoundariesW mm}{\cropedBoundariesH mm}
+		{\input{layouts/standard_back_layout.tex}}
+	\end{figure}
+\end{center}
+\end{document}
