@@ -1,0 +1,46 @@
+\documentclass[letterpaper]{article}
+
+%-- imports
+\input{../globalVariables.tex}
+% --- Packages \cropedBoundariesW mm
+%\usepackage[paperwidth= \cropPlusCardWidthBound mm, paperheight=\cropPlusCardHeightBound mm,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+
+\usepackage[	paperwidth= \cropedBoundariesW mm, 
+				paperheight=\cropedBoundariesH mm,
+				top=0in, bottom=0in, 
+				left=0in, right=0in]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\usepackage{fontspec}		%Set font
+\setmainfont{Orbit}           % special by Evan Pittson Design
+
+\usepackage{tikz}
+\usepackage{hyperref} % urls
+ \urlstyle{same}
+\usepackage{xcolor}
+\definecolor{mediumaquamarine}{RGB}{\rVar, \gVar, \bVar}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=mediumaquamarine,
+}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- Postcard Backs
+% 1 set
+\includepdf[		pages={2},
+					noautoscale,
+					%duplicatepages={21},
+					pagecommand={
+									\begin{tikzpicture}[remember picture, overlay]	
+									\node[anchor=center] at (8.5, -3.75){Person B};										\node[rotate=-90] at (12.5,-5.75) {\url{www.qugrysrkatztu.github.io} 
+								\textcopyright2020};
+													\end{tikzpicture}
+								}
+					]{card19_back_base.pdf}
+
+\end{document}
