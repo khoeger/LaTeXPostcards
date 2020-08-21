@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+
+%-- imports
+\input{../../../../../../globalVariables.tex}
+% --- Packages
+\usepackage[	%
+						papersize={  \doubleCropedBoundariesH mm,	
+									 \cropPlusCardWidth mm},
+						topmargin = 0mm,
+						botmargin = 0mm,
+						ytrim = 0mm,
+						%
+						leftmargin = 0mm,
+						rightmargin = 0mm,
+						%
+						cropmarks,
+						cropframe, 
+						croplength = 5mm,
+						cropgap= 2.5mm,
+						nopagenumbers
+					]{zwpagelayout}
+					
+\usepackage[final]{pdfpages}
+					
+% --- Formatting
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+
+%--------- Document
+\begin{document}
+\includepdf[		pages={1-21},
+					noautoscale,
+					offset = -20 20,
+					delta = 0 0
+					]{joinABFrontAndBack.pdf}
+\end{document}
