@@ -5,7 +5,7 @@
 
 \usepackage[	paperwidth= \doubleCropedBoundariesH mm, 
 				paperheight=\cropedBoundariesW mm,
-				top=0in, bottom=0in, left=0in, right=0in]{geometry}
+				top=5mm, bottom=5mm, left=5mm, right=5mm]{geometry}
 
 \usepackage[final]{pdfpages}
 
@@ -15,7 +15,9 @@
 \begin{document}
 \includepdfmerge[		noautoscale		,			
 						%angle=-90			,
-						nup=2x1
+						nup=2x1,
+						delta = 10 0,
+						offset = -10 0
 					]
 		{
 			% odd page
