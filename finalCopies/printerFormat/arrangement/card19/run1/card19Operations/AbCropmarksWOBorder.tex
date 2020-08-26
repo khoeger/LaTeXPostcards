@@ -1,0 +1,18 @@
+\documentclass[10pt]{article}
+
+%-- imports
+\input{../../../../../../globalVariables.tex}
+
+\usepackage[final]{pdfpages}
+					
+\usepackage[paperwidth= \doubleCardCropSideB mm, paperheight=\doubleCardCropUpB mm,top=0in, bottom=0in, left=0in, right=0in]{geometry}
+					
+% --- Formatting
+\pagenumbering{gobble}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\includepdf[		pages={1-21},
+					noautoscale
+					]{ABCropmarksBorder.pdf}
+\end{document}
