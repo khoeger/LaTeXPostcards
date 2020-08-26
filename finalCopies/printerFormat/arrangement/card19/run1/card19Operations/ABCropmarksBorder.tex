@@ -4,8 +4,8 @@
 \input{../../../../../../globalVariables.tex}
 % --- Packages
 \usepackage[	%
-						papersize={  \doubleCropedBoundariesH mm,	
-									 \cropPlusCardWidth mm},
+						papersize={  \doubleCardCropSide mm,	
+									 \doubleCardCropUp mm},
 						topmargin = 0mm,
 						botmargin = 0mm,
 						ytrim = 0mm,
@@ -28,9 +28,9 @@
 
 %--------- Document
 \begin{document}
-\includepdf[		pages={1-21},
-					noautoscale%,
-%					offset = -20 20,
+\includepdf[		pages={1},%-21},
+					noautoscale,
+					offset = -27.5 20,
 %					delta = 0 0
 					]{joinABFrontAndBack.pdf}
 \end{document}
