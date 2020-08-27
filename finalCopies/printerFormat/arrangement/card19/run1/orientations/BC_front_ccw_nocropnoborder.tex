@@ -1,0 +1,21 @@
+\documentclass[letterpaper]{article}
+
+%-- imports
+\input{../../../../../../globalVariables.tex}
+
+\usepackage[	paperwidth=  \cropPlusCardHeight mm, %\cropedBoundariesH mm, 
+				paperheight= \cropPlusCardWidth mm, %\cropedBoundariesW mm,
+				top=0mm, bottom=5mm, left=0mm, right=5mm]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- Postcard Fronts
+% 1 set
+\includepdf[	pages={1-21},
+					noautoscale,
+					angle=90
+					]{../../../../../../postcardFront/card19_BC_nocropnoborder_frontinorder.pdf}
+\end{document}
