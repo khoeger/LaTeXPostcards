@@ -1,0 +1,22 @@
+\documentclass[]{article}
+
+%-- imports
+\input{../globalVariables.tex}
+
+\usepackage[	paperwidth= \cropPlusCardWidth mm, 
+				paperheight=\cropPlusCardHeight mm,
+				top=2.5mm, bottom=2.5mm,
+				left=0mm, right=0mm]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\pagenumbering{gobble}
+
+\begin{document}
+% --- Postcard Fronts
+% 1 set
+\includepdf[	pages={ 2-18, 20-
+					},
+					noautoscale%,
+					]{generate_doublecard19_BC_front_nocropnoborder.pdf}
+\end{document}
