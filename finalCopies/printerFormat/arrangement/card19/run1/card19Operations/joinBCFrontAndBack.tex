@@ -1,0 +1,68 @@
+\documentclass[letterpaper]{article}
+
+%-- imports
+\input{../../../../../../globalVariables.tex}
+
+\usepackage[	paperwidth= \doubleCropedBoundariesH mm, 
+				paperheight=\cropedBoundariesW mm,
+				top=5mm, bottom=5mm, left=5mm, right=5mm]{geometry}
+
+\usepackage[final]{pdfpages}
+
+\pagenumbering{gobble}
+
+
+\begin{document}
+\includepdfmerge[		noautoscale		,			
+						%angle=-90			,
+						nup=2x1%,
+%						delta = 10 0,
+%						offset = -10 0
+					]
+		{
+			% odd page
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		1,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	1,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		2,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	2,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		3,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	3,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		4,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	4,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		5,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	5,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		6,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	6,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		7,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	7,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		8,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	8,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		9,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	9,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		10,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	10,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		11,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	11,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		12,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	12,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		13,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	13,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		14,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	14,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		15,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	15,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		16,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	16,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		17,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	17,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		18,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	18,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		19,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	19,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		20,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	20,
+			../orientations/BC_back_cw_nocropnoborder.pdf, 		21,
+			../orientations/BC_front_ccw_nocropnoborder.pdf, 	21
+		}
+
+\end{document}
